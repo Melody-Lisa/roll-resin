@@ -33,7 +33,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
     '8000-melodylisa-rollresin-1cqbigpy9ih.ws-eu110.gitpod.io',
-    'https://roll-and-resin-468ea4759605.herokuapp.com']
+    'roll-and-resin-468ea4759605.herokuapp.com']
 
 # Application definition
 
