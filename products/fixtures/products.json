@@ -1,0 +1,132 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "sd50001",
+        "name": "One Dice",
+        "description": "Just one single test dice.",
+        "price": 3.99,
+        "category": 1,
+        "rating": 4.6,
+        "image": ""
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "ds50001",
+        "name": "Dice Set",
+        "description": "Just one set of test dice. There might be 7 of them.",
+        "price": 8.99,
+        "category": 4,
+        "rating": 4.6,
+        "image": ""
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "sku": "spd50001",
+        "name": "Special Dice",
+        "description": "What makes these dice so special? I certainly don't know yet. We will find out later, probably.",
+        "price": 25.99,
+        "category": 3,
+        "rating": 4.7,
+        "image": ""
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+        "sku": "m50001",
+        "name": "Mini Guy",
+        "description": "Just look at how small he is! I'm not too sure on the price though...",
+        "price": 69.99,
+        "category": 4,
+        "rating": 3,
+        "image": ""
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+        "sku": "db50001",
+        "name": "Dice Bag",
+        "description": "It's a bag. For those dice you just bought.",
+        "price": 23.99,
+        "category": 5,
+        "rating": 5,
+        "image": ""
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+        "sku": "na50001",
+        "name": "New Dice",
+        "description": "Wow, these are nice! And brand new!",
+        "price": 3.99,
+        "category": 6,
+        "rating": 4.7,
+        "image": ""
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+        "sku": "d50001",
+        "name": "Dice Set with Bag",
+        "description": "Would you like a bag for that?",
+        "price": 30,
+        "category": 7,
+        "rating": 4.4,
+        "image": ""
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+        "sku": "c50001",
+        "name": "Sad Lonely Dice",
+        "description": "This lonely dice needs a home.",
+        "price": 3,
+        "category": 8,
+        "rating": 4.5,
+        "image": ""
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.product",
+      "fields": {
+        "sku": "ds50002",
+        "name": "Green Dice Set",
+        "description": "This set is green.",
+        "price": 6.99,
+        "category": 1,
+        "rating": 4.7,
+        "image": ""
+      }
+    },
+    {
+      "pk": 10,
+      "model": "products.product",
+      "fields": {
+        "sku": "m50002",
+        "name": "Mini Guys",
+        "description": "Are they multiplying?",
+        "price": 13.99,
+        "category": 4,
+        "rating": 4.4,
+        "image": ""
+      }
+    }
+]
