@@ -15,24 +15,30 @@ a.hover-underline-animation {
     display: inline-block;
     position: relative;
     color: red;
+    text-decoration: none; /* Remove the default underline */
 }
 
-a.hover-underline-animation::after {
+a.hover-underline-animation::before {
     content: '';
     position: absolute;
     width: 100%;
-    transform: scaleX(0);
     height: 2px;
     bottom: 0;
     left: 0;
     background-color: red;
+    transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
 
-a.hover-underline-animation:hover::after {
+a.hover-underline-animation:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+a.hover-underline-animation:hover {
+    background-color: transparent;
+    color: red;
 }
 
 .dropdown-menu.border-0.background-black a.dropdown-item {
@@ -82,8 +88,12 @@ h2 .logo-font {
     background-color: green;
 }
 
+.shade-invert {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset;
+}
+
 .shop-now-button {
-    background: black;
+    background: #212529;
     color: red;
     min-width: 260px;
 }
@@ -94,7 +104,7 @@ h2 .logo-font {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: black;
     color: green;
 }
 

@@ -33,7 +33,7 @@
         <form method="GET" action="">
           <div class="input-group w-100">
             <input class="form-control border border-black
-             rounded-0 text-white background-black" type="text" name="q" placeholder="Search our site">
+             rounded-0 text-red bg-dark shade-invert" type="text" name="q" placeholder="Search our site">
             <div class="input-group-append">
               <button class="form-control btn border border-black rounded-0" type="submit">
                 <span class="icon">
@@ -55,7 +55,7 @@
                 <p class="my-0 text-red">My Account</p>
               </div>
             </a>
-            <div class="dropdown-menu border-0 background-black" aria-labelledby="user-options">
+            <div class="dropdown-menu border-0 bg-dark shade-invert" aria-labelledby="user-options">
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
               <a href="" class="dropdown-item hover-underline-animation">Product Management</a>
