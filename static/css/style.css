@@ -10,6 +10,16 @@ body {
     font-family: 'Sedan';
 }
 
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: black;
+    z-index: -1;
+}
+
 /*.......................................Hover underline from 30 seconds of code */
 a.hover-underline-animation {
     display: inline-block;
@@ -107,6 +117,25 @@ h2 .logo-font {
     background: black;
     color: green;
 }
+
+.hexagon {
+    display: inline-block;
+    box-shadow: 10px 10px 5px #000;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: .7s;
+    margin: 2px;
+  }
+  .hexagon:hover {
+    background: black;
+    clip-path: polygon(0% 20%,
+    60% 20%,
+    60% 0%,
+   100% 50%,
+    60% 100%,
+    60% 80%,
+     0% 80%);
+     transition: .7s;
+  }
 
 /* -------------------------------- Media Queries */
 
