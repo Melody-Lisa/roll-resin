@@ -16,7 +16,7 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: black;
+    background: white;
     z-index: -1;
 }
 
