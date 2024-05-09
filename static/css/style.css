@@ -10,6 +10,12 @@ body {
     font-family: 'Sedan';
 }
 
+.welcome-container {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 .overlay {
     height: 100%;
     width: 100%;
@@ -80,6 +86,11 @@ h2 .logo-font {
 
 .logo-font {
     text-transform: uppercase;
+    text-shadow: 1px 1px 1px black;
+}
+
+.welcome-font {
+    text-shadow: 2px 2px 1px black;
 }
 
 .text-red {
