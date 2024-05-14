@@ -20,7 +20,7 @@
         "name": "Dice Set",
         "description": "Just one set of test dice. There might be 7 of them.",
         "price": 8.99,
-        "category": 4,
+        "category": 2,
         "rating": 4.6,
         "image": ""
       }

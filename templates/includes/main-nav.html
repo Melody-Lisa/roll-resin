@@ -20,10 +20,10 @@
                 Dice
             </a>
             <div class="dropdown-menu border-0 bg-dark shade-invert" aria-labelledby="dice-link">
-                <a href="" class="dropdown-item hover-underline-animation">Single Dice</a>
-                <a href="" class="dropdown-item hover-underline-animation">Dice Sets</a>
-                <a href="" class="dropdown-item hover-underline-animation">Specialty Dice</a>
-                <a href="" class="dropdown-item hover-underline-animation">All Dice</a>
+                <a href="{% url 'products' %}?category=single_dice" class="dropdown-item hover-underline-animation">Single Dice</a>
+                <a href="{% url 'products' %}?category=dice_sets" class="dropdown-item hover-underline-animation">Dice Sets</a>
+                <a href="{% url 'products' %}?category=specialty_dice" class="dropdown-item hover-underline-animation">Specialty Dice</a>
+                <a href="{% url 'products' %}?category=single_dice,dice_sets,specialty_dice" class="dropdown-item hover-underline-animation">All Dice</a>
             </div>
         </li>
         <!-- Accessories -->
@@ -33,9 +33,9 @@
                 Accessories
             </a>
             <div class="dropdown-menu border-0 bg-dark shade-invert" aria-labelledby="accessories-link">
-                <a href="" class="dropdown-item hover-underline-animation">Miniatures</a>
-                <a href="" class="dropdown-item hover-underline-animation">Dice Bags</a>
-                <a href="" class="dropdown-item hover-underline-animation">All Accessories</a>
+                <a href="{% url 'products' %}?category=miniatures" class="dropdown-item hover-underline-animation">Miniatures</a>
+                <a href="{% url 'products' %}?category=dice_bags" class="dropdown-item hover-underline-animation">Dice Bags</a>
+                <a href="{% url 'products' %}?category=miniatures,dice_bags" class="dropdown-item hover-underline-animation">All Accessories</a>
             </div>
         </li>
         <!-- Special Offers -->
@@ -45,10 +45,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0 bg-dark shade-invert" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item hover-underline-animation">New Arrivals</a>
-                <a href="" class="dropdown-item hover-underline-animation">Deals</a>
-                <a href="" class="dropdown-item hover-underline-animation">Clearance</a>
-                <a href="" class="dropdown-item hover-underline-animation">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item hover-underline-animation">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item hover-underline-animation">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item hover-underline-animation">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item hover-underline-animation">All Specials</a>
             </div>
         </li>
     </ul>
