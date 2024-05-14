@@ -7,9 +7,9 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0 bg-dark shade-invert" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item hover-underline-animation">By Price</a>
-                <a href="" class="dropdown-item hover-underline-animation">By Rating</a>
-                <a href="" class="dropdown-item hover-underline-animation">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item hover-underline-animation">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item hover-underline-animation">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item hover-underline-animation">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item hover-underline-animation">All Products</a>
             </div>
         </li>
