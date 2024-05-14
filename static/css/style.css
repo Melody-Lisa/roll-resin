@@ -97,6 +97,14 @@ h2 .logo-font {
     color: red !important;
 }
 
+.text-green {
+    color: green;
+}
+
+.text-yellow {
+    color: yellow;
+}
+
 .text-black {
     color: black;
 }
