@@ -1,4 +1,8 @@
-/*.......................................Site Wide */
+/*---------------------------------------
+    General Styles
+---------------------------------------*/
+
+/* Site Wide */
 html {
     height: 100%;
 }
@@ -10,6 +14,7 @@ body {
     font-family: 'Sedan';
 }
 
+/* Welcome Overlay */
 .welcome-overlay {
     height: 100%;
     width: 100%;
@@ -26,7 +31,11 @@ body {
     z-index: -1;
 }
 
-/*.......................................Hover underline from 30 seconds of code */
+/*---------------------------------------
+    Hover Effects
+---------------------------------------*/
+
+/* Hover underline from 30 seconds of code */
 a.hover-underline-animation {
     display: inline-block;
     position: relative;
@@ -57,6 +66,10 @@ a.hover-underline-animation:hover {
     color: red;
 }
 
+/*---------------------------------------
+    Dropdown Menu Styles
+---------------------------------------*/
+
 .dropdown-menu.border-0.background-black a.dropdown-item {
     background-color: transparent; /* Set background color to transparent */
     color: red; /* Set text color */
@@ -67,11 +80,18 @@ a.hover-underline-animation:hover {
     font-weight: bold;
 }
 
+/*---------------------------------------
+    Navbar Styles
+---------------------------------------*/
+
 .navbar-toggler-icon {
     color: red;
 }
 
-/* from Bulma */
+/*---------------------------------------
+    Style by Bulma
+---------------------------------------*/
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -80,9 +100,9 @@ a.hover-underline-animation:hover {
     width: 1.5rem;
 }
 
-h2 .logo-font {
-    color: red;
-}
+/*---------------------------------------
+    Text Colors Fonts and Borders
+---------------------------------------*/
 
 .logo-font {
     text-transform: uppercase;
@@ -93,7 +113,8 @@ h2 .logo-font {
     text-shadow: 2px 2px 1px black;
 }
 
-.text-red {
+.text-red,
+h2 .logo-font {
     color: red !important;
 }
 
@@ -113,6 +134,10 @@ h2 .logo-font {
     border: 1px solid black !important;
 }
 
+/*---------------------------------------
+    Background Colors and Shadows
+---------------------------------------*/
+
 .background-black {
     background-color: black !important;
 }
@@ -124,6 +149,10 @@ h2 .logo-font {
 .shade-invert {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset;
 }
+
+/*---------------------------------------
+    Button Styles
+---------------------------------------*/
 
 .shop-now-button {
     background: #212529;
@@ -141,31 +170,33 @@ h2 .logo-font {
     color: green;
 }
 
-/* -------------------------------- Media Queries */
+/*---------------------------------------
+    Media Queries
+---------------------------------------*/
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
       max-width: 80%;
     }
-  }
-  
-  /* fixed top navbar only on medium and up */
-  @media (min-width: 992px) {
-      .fixed-top-desktop-only {
-          position: fixed;
-          top: 0;
-          right: 0;
-          left: 0;
-          z-index: 1030;
-      }
-  
-      .header-container {
-          padding-top: 164px;
-      }
-  }
+}
 
-  @media (max-width: 991px) {
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+@media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
     }
