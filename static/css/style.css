@@ -66,6 +66,11 @@ a.hover-underline-animation:hover {
     color: red;
 }
 
+.hover-link:hover {
+    color: green;
+    text-decoration: underline;
+}
+
 /*---------------------------------------
     Dropdown Menu Styles
 ---------------------------------------*/
@@ -168,6 +173,11 @@ h2 .logo-font {
 .btn-black:focus {
     background: black;
     color: green;
+}
+
+a.category-badge > span.badge:hover {
+    background: #fff !important;
+    color: black !important;
 }
 
 /*---------------------------------------
