@@ -15,6 +15,12 @@
     <div class="row">
         <div class="col text-center mt-3">
             <h2 class="logo-font">Products</h2>
+            {% for c in current_categories %}
+            <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                <span
+                    class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
+            </a>
+            {% endfor %}
             <hr class="w-50 mb-1">
         </div>
     </div>
@@ -52,16 +58,19 @@
                                     </p>
                                     {% endif %}
                                     {% if product.rating %}
-                                        {% if product.rating >= 4.00 %}
-                                            <small class="text-green"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                        {% elif product.rating > 2.00 %}
-                                            <small class="text-yellow"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                        {% else %}
-                                            <small class="text-red"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                        {% endif %}
+                                    {% if product.rating >= 4.00 %}
+                                    <small class="text-green"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
+                                        5</small>
+                                    {% elif product.rating > 2.00 %}
+                                    <small class="text-yellow"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
+                                        5</small>
                                     {% else %}
-                                        <small class="text-red">No Rating</small>
-                                    {% endif %}                                
+                                    <small class="text-red"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
+                                        5</small>
+                                    {% endif %}
+                                    {% else %}
+                                    <small class="text-red">No Rating</small>
+                                    {% endif %}
 
                                 </div>
                             </div>
