@@ -180,6 +180,25 @@ a.category-badge > span.badge:hover {
     color: black !important;
 }
 
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
+    transition: box-shadow 0.8s;
+}
+
+.btt-link:hover {
+    text-decoration: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    border-radius: 25px;
+}
+
 /*---------------------------------------
     Media Queries
 ---------------------------------------*/
