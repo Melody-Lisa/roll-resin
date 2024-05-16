@@ -82,7 +82,7 @@
                         <div class="card-footer bg-dark pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold text-white text-right">
+                                    <p class="lead mb-0 text-left font-weight-bold text-white text-shadow text-right">
                                         ${{ product.price }}</p>
                                     {% if product.category %}
                                     <p class="small mt-1 mb-0 text-right">
@@ -94,13 +94,13 @@
                                     {% endif %}
                                     {% if product.rating %}
                                     {% if product.rating >= 4.00 %}
-                                    <small class="text-green"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
+                                    <small class="text-white text-shadow"><i class="fas fa-star mr-1 text-green"></i>{{ product.rating }} /
                                         5</small>
                                     {% elif product.rating > 2.00 %}
-                                    <small class="text-yellow"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
+                                    <small class="text-white text-shadow"><i class="fas fa-star mr-1 text-yellow"></i>{{ product.rating }} /
                                         5</small>
                                     {% else %}
-                                    <small class="text-red"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
+                                    <small class="text-white text-shadow"><i class="fas fa-star mr-1 text-red"></i>{{ product.rating }} /
                                         5</small>
                                     {% endif %}
                                     {% else %}
