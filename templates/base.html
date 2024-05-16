@@ -66,12 +66,12 @@
           <li class="list-inline-item dropdown">
             <a class="text-red nav-link hover-underline-animation" href="#" id="user-options" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-              <div class="text-center">
+              <div class="text-center welcome-font">
                 <div><i class="fas fa-user fa-lg text-red"></i></div>
                 <p class="my-0 text-red">My Account</p>
               </div>
             </a>
-            <div class="dropdown-menu border-0 bg-dark shade-invert" aria-labelledby="user-options">
+            <div class="dropdown-menu border-0 bg-dark shade-invert text-shadow" aria-labelledby="user-options">
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
               <a href="" class="dropdown-item hover-underline-animation">Product Management</a>
@@ -87,7 +87,7 @@
           <li class="list-inline-item">
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link hover-underline-animation"
               href="{% url 'view_bag' %}">
-              <div class="text-center">
+              <div class="text-center welcome-font">
                 <div><i class="fas fa-shopping-bag fa-lg text-red"></i></div>
                 <p class="my-0 text-red">
                   {% if grand_total %}
@@ -132,7 +132,7 @@
   {% endblock %}
 
   <!-- footer -->
-  <footer id="foot" class="footer nav bg-dark fixed-bottom py-2">
+  <footer id="foot" class="footer nav bg-dark py-2">
     <div class="container-fluid">
       <div class="row align-items-center">
         <div class="col-12 col-sm-6">

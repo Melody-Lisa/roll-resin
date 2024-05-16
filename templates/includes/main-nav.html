@@ -6,7 +6,7 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
-            <div class="dropdown-menu border-0 bg-dark shade-invert" aria-labelledby="all-products-link">
+            <div class="dropdown-menu border-0 bg-dark shade-invert text-shadow" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item hover-underline-animation">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item hover-underline-animation">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item hover-underline-animation">By Category</a>
@@ -19,7 +19,7 @@
                 aria-haspopup="true" aria-expanded="false">
                 Dice
             </a>
-            <div class="dropdown-menu border-0 bg-dark shade-invert" aria-labelledby="dice-link">
+            <div class="dropdown-menu border-0 bg-dark shade-invert text-shadow" aria-labelledby="dice-link">
                 <a href="{% url 'products' %}?category=single_dice" class="dropdown-item hover-underline-animation">Single Dice</a>
                 <a href="{% url 'products' %}?category=dice_sets" class="dropdown-item hover-underline-animation">Dice Sets</a>
                 <a href="{% url 'products' %}?category=specialty_dice" class="dropdown-item hover-underline-animation">Specialty Dice</a>
@@ -32,7 +32,7 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Accessories
             </a>
-            <div class="dropdown-menu border-0 bg-dark shade-invert" aria-labelledby="accessories-link">
+            <div class="dropdown-menu border-0 bg-dark shade-invert text-shadow" aria-labelledby="accessories-link">
                 <a href="{% url 'products' %}?category=miniatures" class="dropdown-item hover-underline-animation">Miniatures</a>
                 <a href="{% url 'products' %}?category=dice_bags" class="dropdown-item hover-underline-animation">Dice Bags</a>
                 <a href="{% url 'products' %}?category=miniatures,dice_bags" class="dropdown-item hover-underline-animation">All Accessories</a>
@@ -44,7 +44,7 @@
                 aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
-            <div class="dropdown-menu border-0 bg-dark shade-invert" aria-labelledby="specials-link">
+            <div class="dropdown-menu border-0 bg-dark shade-invert text-shadow" aria-labelledby="specials-link">
                 <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item hover-underline-animation">New Arrivals</a>
                 <a href="{% url 'products' %}?category=deals" class="dropdown-item hover-underline-animation">Deals</a>
                 <a href="{% url 'products' %}?category=clearance" class="dropdown-item hover-underline-animation">Clearance</a>
