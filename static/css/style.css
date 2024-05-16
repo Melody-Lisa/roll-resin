@@ -21,6 +21,7 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+/* Site-wide Overlay */
 .overlay {
     height: 100%;
     width: 100%;
@@ -155,6 +156,10 @@ h2 .logo-font {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset;
 }
 
+.text-shadow {
+    text-shadow: 0 0 3px rgba(0, 0, 0, 1);
+}
+
 /*---------------------------------------
     Button Styles
 ---------------------------------------*/
@@ -171,7 +176,7 @@ h2 .logo-font {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: black;
+    background: #212529;
     color: green;
 }
 
