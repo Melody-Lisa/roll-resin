@@ -4,7 +4,7 @@ By Melody Lisa.
 
 [View the live project here.](https://blissboost-079490cc3274.herokuapp.com)
 
-This is the documentation for BlissBoost - a social media site aimed towards spreading positivity in all aspects of life. The site has been built using HTML5, CSS3 with materialize templating, MongoDB and Python with Jinja templating for the Milestone 3 backend development project for Code Institute's web development diploma.
+This is the documentation for Roll & Resin - an ecommerce site aimed towards selling tabletop accessories. The site has been built using HTML5, CSS3 with bootstrap templating, Python and Django with a relational database stored with ElephantSQL.
 
 ******
 
