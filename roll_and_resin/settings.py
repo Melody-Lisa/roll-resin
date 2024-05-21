@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
-    '8000-melodylisa-rollresin-1cqbigpy9ih.ws-eu111.gitpod.io',
+    '8000-melodylisa-rollresin-1cqbigpy9ih.ws-eu114.gitpod.io',
     'roll-and-resin-468ea4759605.herokuapp.com']
 
 # Application definition
