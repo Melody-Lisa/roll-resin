@@ -161,7 +161,9 @@ h2 .logo-font {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset;
 }
 
-.text-shadow {
+.text-shadow,
+.btn-up:hover,
+.btn-down:hover {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 }
 
@@ -200,7 +202,9 @@ a.category-badge > span.badge:hover {
     right: 10px;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
     transition: box-shadow 0.8s;
 }
@@ -209,6 +213,14 @@ a.category-badge > span.badge:hover {
     text-decoration: none;
     box-shadow: 0 0 20px rgba(0, 0, 0, 1);
     border-radius: 25px;
+}
+
+.btn-down:hover {
+    color: red !important;
+}
+
+.btn-up:hover {
+    color: green !important;
 }
 
 /*---------------------------------------
