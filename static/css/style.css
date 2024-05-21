@@ -130,7 +130,7 @@ h2 .logo-font {
 }
 
 .text-green {
-    color: green;
+    color: green !important;
 }
 
 .text-yellow {
@@ -157,13 +157,18 @@ h2 .logo-font {
     background-color: green;
 }
 
+.box-shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
 .shade-invert {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset;
 }
 
 .text-shadow,
 .btn-up:hover,
-.btn-down:hover {
+.btn-down:hover,
+.green-link:hover {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 }
 
@@ -172,9 +177,13 @@ h2 .logo-font {
 ---------------------------------------*/
 
 .shop-now-button {
+    min-width: 260px;
+}
+
+.shop-now-button,
+.form-button {
     background: #212529;
     color: red;
-    min-width: 260px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
     border: 1px solid black;
 }
@@ -184,6 +193,9 @@ h2 .logo-font {
 .shop-now-button:focus,
 .btn-black:hover,
 .btn-black:active,
+.form-button:focus,
+.form-button:hover,
+.form-button:active,
 .btn-black:focus {
     background: #212529;
     color: green;
@@ -221,6 +233,16 @@ a.category-badge > span.badge:hover {
 
 .btn-up:hover {
     color: green !important;
+}
+
+/*---------------------------------------
+    Footer
+---------------------------------------*/
+
+.footer {
+    /* Example of sticky footer using flexbox */
+    bottom: 0;
+    width: 100%;
 }
 
 /*---------------------------------------

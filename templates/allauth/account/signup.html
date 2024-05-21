@@ -1,21 +1,43 @@
 {% extends "account/base.html" %}
-
 {% load i18n %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+{% endblock %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col">
+      <!-- Add any header content here if needed -->
+    </div>
+  </div>
+</div>
+{% endblock %}
+
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
-
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
-
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form>
-
+<div class="container-fluid welcome-overlay h-100">
+  <div class="row h-100 align-items-center justify-content-lg-left">
+    <div class="col-12 col-md-6 col-lg-5 my-3">
+      <div class="p-4 rounded-0 bg-dark shade-invert border-black text-white">
+        <h1 class="logo-font text-center">{% trans "Sign Up" %}</h1>
+        <form class="signup-form" method="post" action="{% url 'account_signup' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+          <div class="d-flex justify-content-between mt-3">
+            <a class="btn btn-link text-green green-link"
+              href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+            <button class="btn form-button" type="submit">{% trans "Sign Up" %}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
