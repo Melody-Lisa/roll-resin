@@ -236,16 +236,6 @@ a.category-badge > span.badge:hover {
 }
 
 /*---------------------------------------
-    Footer
----------------------------------------*/
-
-.footer {
-    /* Example of sticky footer using flexbox */
-    bottom: 0;
-    width: 100%;
-}
-
-/*---------------------------------------
     Media Queries
 ---------------------------------------*/
 
