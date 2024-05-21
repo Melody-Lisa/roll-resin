@@ -10,14 +10,18 @@ html {
 body {
     background: url('/media/dice-background2.webp') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
     font-family: 'Sedan';
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Welcome Overlay */
 .welcome-overlay {
-    height: 100%;
-    width: 100%;
+    background-size: cover;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -27,8 +31,6 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    position: fixed;
-    background: white;
     z-index: -1;
 }
 
@@ -143,6 +145,10 @@ h2 .logo-font {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+hr {
+    background-color: #fff;
 }
 
 /*---------------------------------------
