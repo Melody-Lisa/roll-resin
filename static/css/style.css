@@ -248,11 +248,11 @@ a.category-badge > span.badge:hover {
     border-radius: 25px;
 }
 
-.btn-down:hover {
+.btn-down:not(:disabled):hover {
     color: red !important;
 }
 
-.btn-up:hover {
+.btn-up:not(:disabled):hover {
     color: green !important;
 }
 
