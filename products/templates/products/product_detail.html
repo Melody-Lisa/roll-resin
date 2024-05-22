@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container bg-dark text-white text-shadow">
+<div class="container border border-black box-shadow bg-dark text-white text-shadow">
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
@@ -80,9 +80,8 @@
                         </div>
 
                         <div class="col-12">
-                            <input type="submit"
-                            class="btn bg-dark text-white btn-up rounded-0 text-uppercase mt-5"
-                            value="Add to Bag">
+                            <input type="submit" class="btn bg-dark text-white btn-up rounded-0 text-uppercase mt-5"
+                                value="Add to Bag">
 
                             <a href="{% url 'products' %}" class="btn border-black box-shadow btn-dark rounded-0 mt-5">
                                 <span class="icon">
@@ -92,7 +91,6 @@
                             </a>
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                    </div>
                 </form>
 
             </div>
