@@ -1,0 +1,41 @@
+/* Custom Stripe Styles */
+.StripeElement,
+.stripe-style-input {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid #6c757d;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 150ms ease, border-color 150ms ease;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid #000 !important;
+  border-radius: 4px !important;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.stripe-style-input::placeholder {
+  color: #6c757d;
+}
+
+#payment-form .form-control,
+#card-element {
+  color: #000;
+  border: 1px solid #6c757d;
+  border-radius: 0;
+}
+
+#payment-form .form-control:focus,
+#card-element:focus {
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
