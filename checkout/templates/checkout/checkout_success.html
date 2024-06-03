@@ -14,30 +14,31 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
-<div class="container my-5">
-    <div class="row">
-        <div class="col text-center">
-            <hr class="my-4">
-            <h2 class="logo-font mb-4">Thank You</h2>
-            <hr class="my-4">
-            <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+<div class="container-fluid my-3 d-flex align-items-center justify-content-center">
+    <div class="p-4 rounded-0 bg-dark shade-invert border-black box-shadow text-white">
+        <div class="row">
+            <div class="col text-center">
+                <hr class="my-4">
+                <h2 class="logo-font mb-4">Thank You</h2>
+                <hr class="my-4">
+                <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+            </div>
         </div>
-    </div>
 
-    <div class="row mt-5">
-        <div class="col-12 col-lg-7 mx-auto">
-            <!-- You can add order summary details here if needed -->
+        <div class="row mt-5">
+            <div class="col-12 col-lg-7 mx-auto">
+                <!-- You can add order summary details here if needed -->
+            </div>
         </div>
-    </div>
-    <div class="row mt-5">
-        <div class="col-12 col-lg-7 mx-auto text-right">
-            <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn btn-black rounded-0 my-2">
-                <span class="icon mr-2">
-                    <i class="fas fa-gifts"></i>
-                </span>
-                <span class="text-uppercase">Now check out the latest deals!</span>
-            </a>
+        <div class="row mt-5">
+            <div class="col-12 col-lg-7 mx-auto text-right">
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn shop-now-button my-2">
+                    <span class="icon mr-2">
+                        <i class="fas fa-gifts"></i>
+                    </span>
+                    <span class="text-uppercase">Now check out the latest deals!</span>
+                </a>
+            </div>
         </div>
     </div>
 </div>
