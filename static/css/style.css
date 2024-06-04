@@ -311,6 +311,10 @@ a.category-badge > span.badge:hover {
     color: green !important;
 }
 
+.btn-outline-black {
+    border: black solid 1px;
+}
+
 /*---------------------------------------
     Media Queries
 ---------------------------------------*/
