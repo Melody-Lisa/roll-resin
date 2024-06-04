@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'profiles/css/profiles.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container my-3">
+    <div class="row align-items-center justify-content-center text-shadow">
+        <div class="col-12 col-lg-8">
+            <div class="content-box p-4 rounded-0 bg-dark shade-invert border-black box-shadow text-white">
+                <h2 class="logo-font text-center mb-4">profile</h2>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
