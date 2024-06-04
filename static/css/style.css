@@ -25,15 +25,6 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Site-wide Overlay */
-.overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
 /*---------------------------------------
     Toasts
 ---------------------------------------*/
@@ -188,10 +179,6 @@ a.hover-underline-animation:hover {
     text-shadow: 1px 1px 1px black;
 }
 
-.welcome-font {
-    text-shadow: 2px 2px 1px black;
-}
-
 .welcome-font-invert {
     text-shadow: 2px 2px 2px rgba(225, 225, 225, 0.5);
 }
@@ -268,12 +255,9 @@ hr {
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
 .form-button:focus,
 .form-button:hover,
-.form-button:active,
-.btn-black:focus {
+.form-button:active {
     background: #212529;
     color: green;
 }
@@ -310,10 +294,6 @@ a.category-badge > span.badge:hover {
 
 .btn-up:not(:disabled):hover {
     color: green !important;
-}
-
-.btn-outline-black {
-    border: black solid 1px;
 }
 
 /*---------------------------------------
