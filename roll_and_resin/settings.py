@@ -22,7 +22,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-melodylisa-rollresin-1cqbigpy9ih.ws-eu114.gitpod.io',
-    'https://roll-and-resin-60438760f385.herokuapp.com']
+    'roll-and-resin-60438760f385.herokuapp.com']
 
 # Application definition
 
