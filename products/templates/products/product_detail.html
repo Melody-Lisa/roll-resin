@@ -51,10 +51,10 @@
 
                 {% if request.user.is_superuser %}
                 <p class="mb-0">
-                <small class="ml-3">
-                    <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                </small>
+                    <small class="ml-3">
+                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                    </small>
                 </p>
                 {% endif %}
 
@@ -88,19 +88,20 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-12">
-                            <input type="submit" class="btn bg-dark text-white btn-up rounded-0 text-uppercase mt-5"
-                                value="Add to Bag">
+                    <div class="col-12">
+                        <input type="submit" class="btn bg-dark text-white btn-up rounded-0 text-uppercase mt-5"
+                            value="Add to Bag">
 
-                            <a href="{% url 'products' %}" class="btn border-black box-shadow btn-dark rounded-0 mt-5">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Keep Shopping</span>
-                            </a>
-                        </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <a href="{% url 'products' %}" class="btn border-black box-shadow btn-dark rounded-0 mt-5">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Keep Shopping</span>
+                        </a>
+                    </div>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </form>
 
             </div>
