@@ -5,14 +5,13 @@
 <div class="container header-container">
     <div class="row">
         <div class="col">
-
+            <!-- Your existing header content -->
         </div>
     </div>
 </div>
 {% endblock %}
 
 {% block content %}
-
 <div class="container-fluid h-100">
     <div class="row h-100 align-items-center welcome-font">
         <div class="col-12 col-md-5 col-lg-4 my-auto">
@@ -23,7 +22,33 @@
                 </h4>
             </div>
         </div>
+        <div class="col-md-7 col-lg-8">
+            <!-- Latest News Carousel -->
+            <div id="latestNewsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    {% for news_item in news_items_published %}
+                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                        <img src="{% if news_item.image %}{{ news_item.image.url }}{% else %}{% static 'img/default_news_image.jpg' %}{% endif %}"
+                            class="d-block w-100" alt="{{ news_item.title }}">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>{{ news_item.title }}</h5>
+                            <p>{{ news_item.summary }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#latestNewsCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#latestNewsCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
     </div>
 </div>
-
 {% endblock %}

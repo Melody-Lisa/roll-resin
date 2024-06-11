@@ -1,7 +1,6 @@
 from django.shortcuts import render
+from news.models import News
 
-# Create your views here.
-
-def index(request):
-    """" A view to render the home page """
-    return render(request, 'home/index.html')
+def home(request):
+    news_items_published = News.objects.filter(status=1).order_by('-create_date')[:5]
+    return render(request, 'home/index.html/', {'news_items_published': news_items_published})
