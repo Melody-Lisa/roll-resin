@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container my-3">
+    <div class="row align-items-center justify-content-center text-shadow">
+        <div class="col-12 col-lg-11">
+            <div class="content-box p-4 rounded-0 bg-dark shade-invert border-black box-shadow text-white">
+                <hr>
+                <h2 class="logo-font text-center">News</h2>
+                <hr>
+
+                <div class="row">
+                    {% for news_item in news_items_published %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
+                        <div class="card h-100 border-0 bg-dark text-white">
+                            {% if news_item.image %}
+                            <a href="{% url 'news_item' news_item.id %}">
+                                <img class="card-img-top img-fluid" src="{{ news_item.image.url }}"
+                                    alt="{{ news_item.title }}">
+                            </a>
+                            {% else %}
+                            <a href="{% url 'news_item' news_item.id %}">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                    alt="{{ news_item.title }}">
+                            </a>
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title">{{ news_item.title }}</h5>
+                                <p class="card-text">{{ news_item.news_item_text|truncatechars:100 }}</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0">
+                                <small class="text-muted">Created on {{ news_item.create_date|date:"F j, Y" }}</small>
+                                {% if request.user.is_superuser %}
+                                <div class="mt-2">
+                                    <a href="{% url 'edit_news_item' news_item.id %}"
+                                        class="btn btn-sm btn-outline-light">Edit</a>
+                                    <a href="{% url 'delete_news_item' news_item.id %}"
+                                        class="btn btn-sm btn-outline-danger">Delete</a>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    <!-- Show draft items to admin -->
+                    {% if request.user.is_superuser %}
+                    {% for news_item in news_items_drafts %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
+                        <div class="card h-100 border-0 bg-dark text-white">
+                            {% if news_item.image %}
+                            <a href="{% url 'news_item' news_item.id %}">
+                                <img class="card-img-top img-fluid" src="{{ news_item.image.url }}"
+                                    alt="{{ news_item.title }}">
+                            </a>
+                            {% else %}
+                            <a href="{% url 'news_item' news_item.id %}">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                    alt="{{ news_item.title }}">
+                            </a>
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title">{{ news_item.title }} - <span class="text-red">Draft</span></h5>
+                                <p class="card-text">{{ news_item.news_item_text|truncatechars:100 }}</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0">
+                                <small class="text-muted">Created on {{ news_item.create_date|date:"F j, Y" }}</small>
+                                <div class="mt-2">
+                                    <a href="{% url 'edit_news_item' news_item.id %}"
+                                        class="btn btn-sm btn-outline-light">Edit</a>
+                                    <a href="{% url 'delete_news_item' news_item.id %}"
+                                        class="btn btn-sm btn-outline-danger">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fixed-bottom mb-5 ml-4">
+    <a href="#" class="btn btn-dark btn-lg rounded-circle box-shadow">
+        <i class="fas fa-arrow-up text-green text-shadow"></i>
+    </a>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% endblock %}

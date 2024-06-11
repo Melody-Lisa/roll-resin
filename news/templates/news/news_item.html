@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container my-3">
+    <div class="row align-items-center justify-content-center text-shadow">
+        <div class="col-12 col-lg-11">
+            <div class="content-box p-4 rounded-0 bg-dark shade-invert border-black box-shadow text-white">
+                <div class="row">
+                    <hr>
+                    <div class="col">
+                        <h2 class="logo-font text-center">{{ news_item.title }}</h2>
+                    </div>
+                    <hr>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <img src="{% if news_item.image %}{{ news_item.image.url }}{% else %}{% endif %}"
+                            class="card-img-top" alt="{% if news_item.image %}{{ news_item.title }}{% endif %}">
+                        <hr>
+                        <p class="card-text">{{ news_item.news_item_text }}</p>
+                    </div>
+                    <div class="col-12">
+                        <div class="card-footer bg-transparent border-0 text-start">
+                            <small class="text-muted text-green">Created by {{ news_item.user }} on
+                                {{ news_item.create_date|date:"F j, Y" }}</small>
+                        </div>
+                    </div>
+                    {% if request.user.is_superuser %}
+                    <p class="mb-0 text-end">
+                        <small class="ml-3">
+                            <a href="{% url 'edit_news_item' news_item.id %}">Edit</a> |
+                            <a class="text-danger" href="{% url 'delete_news_item' news_item.id %}">Delete</a>
+                        </small>
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% endblock %}
