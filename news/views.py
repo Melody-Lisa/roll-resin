@@ -33,7 +33,6 @@ def manage_news_items(request):
     """
     all_news_items = News.objects.order_by('-create_date')
     news_items_count = News.objects.filter().count()
-    all_news_items = setup_pagination(all_news_items, request, 4)
 
     context = {
         'news_items': all_news_items,

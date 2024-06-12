@@ -16,11 +16,12 @@
             <div class="content-box p-4 rounded-0 bg-dark shade-invert border-black box-shadow text-white">
                 <hr>
                 <h2 class="logo-font text-center">News</h2>
+                <a href="{% url 'add_news_item' %}" class="btn-up text-red">Add News Article</a>
                 <hr>
 
                 <div class="row">
                     {% for news_item in news_items_published %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
+                    <div class="col-sm-6 col-md-6 mb-4">
                         <div class="card h-100 border-0 bg-dark text-white">
                             {% if news_item.image %}
                             <a href="{% url 'news_item' news_item.id %}">

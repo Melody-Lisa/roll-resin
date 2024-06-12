@@ -171,6 +171,14 @@ a.hover-underline-animation:hover {
 }
 
 /*---------------------------------------
+    Content Containers
+---------------------------------------*/
+
+.news-reel-img {
+    height: 300px;
+}
+
+/*---------------------------------------
     Text Colors Fonts and Borders
 ---------------------------------------*/
 
@@ -343,6 +351,13 @@ a.category-badge > span.badge:hover {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+/* Mobile icons */
+@media (max-width: 390px) {
+    list-inline-item {
+        margin: 0;
     }
 }
 
