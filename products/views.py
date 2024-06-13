@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category
+from .models import Product, Category, Wishlist
 from .forms import ProductForm
 
 
@@ -61,15 +61,23 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
+@login_required
 def product_detail(request, product_id):
-    """ A view to show individual product details """
-
     product = get_object_or_404(Product, pk=product_id)
-
+    in_wishlist = False
+    
+    if request.user.is_authenticated:
+        try:
+            wishlist = Wishlist.objects.get(user=request.user)
+            if product in wishlist.products.all():
+                in_wishlist = True
+        except Wishlist.DoesNotExist:
+            pass
+    
     context = {
         'product': product,
+        'in_wishlist': in_wishlist,
     }
-
     return render(request, 'products/product_detail.html', context)
 
 
@@ -139,3 +147,60 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+@login_required
+def view_product_wishlist(request):
+    """
+    A view that displays users wishlist
+    """
+    try:
+        wishlist = Wishlist.objects.get(user=request.user)
+        wishlist_items = wishlist.products.all()
+        wishlist_items_count = wishlist.products.count()
+        wishlist_product_ids = wishlist_items.values_list('id', flat=True)
+    except Wishlist.DoesNotExist:
+        wishlist_items = None
+        wishlist_items_count = 0
+        wishlist_product_ids = []
+
+    context = {
+        'wishlist_items': wishlist_items,
+        'wishlist_items_count': wishlist_items_count,
+        'wishlist_product_ids': wishlist_product_ids,
+    }
+    return render(request, 'products/wishlist.html', context)
+
+
+@login_required
+def add_product_to_wishlist(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+
+    if product in wishlist.products.all():
+        messages.info(request, 'The product is already in your wishlist!')
+    else:
+        wishlist.products.add(product)
+        messages.info(request, 'Added the product to your wishlist')
+    
+    return redirect('product_detail', product_id=product_id)
+
+
+@login_required
+def remove_product_from_wishlist(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist = get_object_or_404(Wishlist, user=request.user)
+
+    if product in wishlist.products.all():
+        wishlist.products.remove(product)
+        messages.info(request, 'Removed the product from your wishlist.')
+    else:
+        messages.error(request, 'That product is not in your wishlist!')
+
+    # Check if there's a 'next' parameter in the request (referer)
+    redirect_url = request.META.get('HTTP_REFERER')
+    if not redirect_url:
+        # Default to redirecting to products page if no referer found
+        redirect_url = reverse('products')
+
+    return redirect(redirect_url)

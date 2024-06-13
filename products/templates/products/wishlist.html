@@ -15,19 +15,18 @@
         <div class="col-12 col-lg-11">
             <div class="content-box p-4 rounded-0 bg-dark shade-invert border-black box-shadow text-white">
                 <hr>
-                <h2 class="logo-font text-center">{{ user.capitalize }}'s Wishlist</h2>
+                <h2 class="logo-font text-center">{{ user.username|capfirst }}'s Wishlist</h2>
 
                 <hr>
 
                 <div class="row">
                     {% if wishlist_items %}
-                    {% for item in wishlist_items %}
+                    {% for product in wishlist_items %}
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
                         <div class="card h-100 border-0 bg-dark text-white">
                             {% if product.image %}
                             <a href="{% url 'product_detail' product.id %}">
-                                <img class="card-img-top img-fluid" src="{{ product.image.url }}"
-                                    alt="{{ product.name }}">
+                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                             </a>
                             {% else %}
                             <a href="{% url 'product_detail' product.id %}">
@@ -35,6 +34,11 @@
                                     alt="{{ product.name }}">
                             </a>
                             {% endif %}
+                            <a
+                            href="{% url 'remove_product_from_wishlist' product.id %}"
+                            class="btn btn-link text-danger">
+                            <i class="fas fa-heart"></i>
+                        </a>
                             <div class="card-body pb-0">
                                 <p class="card-title">{{ product.name }}</p>
                             </div>
@@ -42,8 +46,7 @@
                                 <p class="lead mb-0">${{ product.price }}</p>
                                 {% if product.category %}
                                 <p class="small mt-1 mb-0">
-                                    <a class="text-green"
-                                        href="{% url 'products' %}?category={{ product.category.name }}">
+                                    <a class="text-green" href="{% url 'products' %}?category={{ product.category.name }}">
                                         <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                                     </a>
                                 </p>
@@ -65,7 +68,7 @@
                     {% endfor %}
                     {% else %}
                     <h3>Your Wishlist is Empty</h3>
-
+                    {% endif %}
                 </div>
 
             </div>
