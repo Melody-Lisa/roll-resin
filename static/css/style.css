@@ -196,7 +196,8 @@ h2 .logo-font {
     color: red !important;
 }
 
-.text-green {
+.text-green,
+.text-muted {
     color: green !important;
 }
 

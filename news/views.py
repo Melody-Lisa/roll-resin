@@ -27,21 +27,6 @@ def news_items(request):
     return render(request, 'news/news.html', context)
 
 
-def manage_news_items(request):
-    """
-    A view to manage all news items
-    """
-    all_news_items = News.objects.order_by('-create_date')
-    news_items_count = News.objects.filter().count()
-
-    context = {
-        'news_items': all_news_items,
-        'news_items_count': news_items_count
-    }
-
-    return render(request, 'news/manage_news_items.html', context)
-
-
 @login_required
 def add_news_item(request):
     """

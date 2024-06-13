@@ -16,7 +16,9 @@
             <div class="content-box p-4 rounded-0 bg-dark shade-invert border-black box-shadow text-white">
                 <hr>
                 <h2 class="logo-font text-center">News</h2>
+                {% if request.user.is_superuser %}
                 <a href="{% url 'add_news_item' %}" class="btn-up text-red">Add News Article</a>
+                {% endif %}
                 <hr>
 
                 <div class="row">
