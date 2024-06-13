@@ -1,0 +1,13 @@
+[{
+    "pk": 1,
+    "model": "news.news",
+    "fields": {
+        "title": "Hello World!",
+        "user": 1,
+        "news_item_text": "In an exciting development, the much-anticipated news articles pages have been successfully launched, offering readers an enhanced experience with a diverse array of content. This launch marks a significant milestone in the ongoing effort to provide timely, reliable, and engaging news coverage to a broad audience. The new pages have been designed with user experience in mind, featuring a clean, intuitive layout that makes navigation effortless.",
+        "image": "dice-background.webp",
+        "create_date": "2024-01-01T00:00:00Z",
+        "update_date": "2024-01-01T00:00:00Z",
+        "status": 1
+    }
+}]
