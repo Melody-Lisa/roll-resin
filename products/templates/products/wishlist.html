@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container my-3">
+    <div class="row align-items-center justify-content-center text-shadow">
+        <div class="col-12 col-lg-11">
+            <div class="content-box p-4 rounded-0 bg-dark shade-invert border-black box-shadow text-white">
+                <hr>
+                <h2 class="logo-font text-center">{{ user.capitalize }}'s Wishlist</h2>
+
+                <hr>
+
+                <div class="row">
+                    {% if wishlist_items %}
+                    {% for item in wishlist_items %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
+                        <div class="card h-100 border-0 bg-dark text-white">
+                            {% if product.image %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid" src="{{ product.image.url }}"
+                                    alt="{{ product.name }}">
+                            </a>
+                            {% else %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                    alt="{{ product.name }}">
+                            </a>
+                            {% endif %}
+                            <div class="card-body pb-0">
+                                <p class="card-title">{{ product.name }}</p>
+                            </div>
+                            <div class="card-footer pt-0 border-0">
+                                <p class="lead mb-0">${{ product.price }}</p>
+                                {% if product.category %}
+                                <p class="small mt-1 mb-0">
+                                    <a class="text-green"
+                                        href="{% url 'products' %}?category={{ product.category.name }}">
+                                        <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                    </a>
+                                </p>
+                                {% endif %}
+                                {% if product.rating %}
+                                {% if product.rating >= 4.00 %}
+                                <small><i class="fas fa-star text-green mr-1"></i>{{ product.rating }} / 5</small>
+                                {% elif product.rating > 2.00 %}
+                                <small><i class="fas fa-star text-yellow mr-1"></i>{{ product.rating }} / 5</small>
+                                {% else %}
+                                <small><i class="fas fa-star text-red mr-1"></i>{{ product.rating }} / 5</small>
+                                {% endif %}
+                                {% else %}
+                                <small class="text-red">No Rating</small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <h3>Your Wishlist is Empty</h3>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fixed-bottom mb-5 ml-4">
+    <a href="#" class="btn btn-dark btn-lg rounded-circle box-shadow">
+        <i class="fas fa-arrow-up text-green text-shadow"></i>
+    </a>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% endblock %}
