@@ -132,8 +132,8 @@ Taking all of the above into account I decided I would need 14 main pages for th
   - __Profile__: This page allows users to view and edit their personal information, such as name, email, and address. It also displays the user's order history and other account-related details.
 
 - __News App__:
-  - __News__: This page lists all news articles or blog posts on the site. Users can browse through the latest news and updates.
-  - __News Item__: This page provides detailed information about a specific news article or blog post. It includes the full text, images, publication date, and author information.
+  - __News__: This page lists all news articles or blog posts on the site. Users can browse through the latest news and updates. Admin or authorized users can choose to edit or delete individual news items from here.
+  - __News Item__: This page provides detailed information about a specific news article or blog post. It includes the full text, images, publication date, and author information. Admin or authorized users can choose to edit or delete news items from here.
   - __Add News Item__: This page is used by administrators or authorized users to add a new news article or blog post. It includes fields for the title, content, images, and publication date.
   - __Edit News Item__: This page allows administrators or authorized users to edit the details of an existing news article or blog post. It is similar to the add news item page but pre-populates the fields with the current information.
 
@@ -145,6 +145,22 @@ Taking all of the above into account I decided I would need 14 main pages for th
 
 #### Site Structure
 
+| **Navbar?** | **Page**            | **Logged Out** | **Logged In (non-admin)** | **Logged In (admin)** |
+|-------------|---------------------|----------------|---------------------------|-----------------------|
+| ✔           | Home Page           | ✔              | ✔                         | ✔                     |
+| ✔           | Products            | ✔              | ✔                         | ✔                     |
+| -           | Product Description | ✔              | ✔                         | ✔                     |
+| -           | Add Product         | -              | -                         | ✔                     |
+| -           | Edit Product        | -              | -                         | ✔                     |
+| ✔           | Wishlist            | -              | ✔                         | ✔                     |
+| ✔           | Bag                 | ✔              | ✔                         | ✔                     |
+| (In messages)           | Checkout            | ✔              | ✔                         | ✔                     |
+| -           | Checkout Success    | ✔              | ✔                         | ✔                     |
+| ✔           | Profile             | -              | ✔                         | ✔                     |
+| ✔           | News                | ✔              | ✔                         | ✔                     |
+| -           | News Item           | ✔              | ✔                         | ✔                     |
+| -           | Add News Item       | -              | -                         | ✔                     |
+| -           | Edit News Item      | -              | -                         | ✔                     |
 
 
 #### Database Structure
@@ -169,6 +185,24 @@ Taking all of the above into account I decided I would need 14 main pages for th
 
 ### Surface
 
+For the user interface design of the website, dark mode Bootstrap stylings have been chosen to create an aesthetically pleasing and user-friendly experience that aligns with the thematic elements of the content.
+
+1. **Dark Mode Benefits**:
+   - **Visual Comfort**: Dark mode reduces eye strain, especially in low-light environments. This makes it easier for users to interact with the site for extended periods.
+   - **Battery Efficiency**: For users on mobile devices, dark mode can help conserve battery life, enhancing the overall user experience.
+   - **Modern Aesthetic**: Dark mode has gained popularity and is often associated with modern, sleek, and professional designs. This can make the site feel more up-to-date and appealing.
+
+2. **Color Scheme**:
+   - **Red and Green**: These colors are chosen to align with the official Dungeons and Dragons branding, providing a familiar yet distinct look.
+     - **Red**: This color has been used for main headings and call to action buttons.
+     - **Green**: This colour has been used for secondary headings, muted text and hover effects over call to action buttons, turning them green from red to encourage them to go!
+   - **Balancing the Colors**: While integrating red and green, care will be taken to avoid overwhelming the user with too many contrasting colors. The primary focus will be on creating a harmonious balance that enhances readability and usability with the main content text being white for maximum readability.
+
+3. **Alignment with Dungeons and Dragons Branding**:
+   - **Similar, Not Identical**: The design aims to capture the essence of Dungeons and Dragons without directly copying their branding. This ensures a unique identity for the site while still appealing to fans of the game.
+   - **Subtle References**: Using colors and design elements inspired by Dungeons and Dragons helps in creating a thematic connection.
+
+By using dark mode Bootstrap stylings with strategically chosen red and green colors, the website will not only look appealing and professional but will also provide a user experience that resonates with the target audience. This approach ensures that the site stands out while maintaining an intuitive and enjoyable interface for users.
 
 
 #### Typography
