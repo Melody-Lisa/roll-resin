@@ -71,19 +71,36 @@ This is the documentation for Roll & Resin - an ecommerce site aimed towards sel
 
 ### Strategy
 
-
-
-
-#### User Goals
-
-
-
-#### Site Admin Goals
-
+This project was built as a milestone project on my Diploma in Web Application Development with Code Institute as a learning tool for Full Stack Frameworks with Django. The aim was to create an ecommerce website with login functionality and Stripe implementation for users to pay for goods.
 
 
 #### User Stories
 
+### New Site Users
+
+- As a new site user, I would like to easily navigate to the main categories of products, so that I can see what the site offers.
+- As a new site user, I would like to see my purchase total at all times, so that I don't overspend.
+- As a new site user, I would like to view the site's latest news, so that I can understand the company better.
+- As a new site user, I would like a clear and straightforward checkout process, so that I can finalize my purchase smoothly.
+- As a new site user, I would like to see social media icons prominently displayed, so that I can follow the company on my preferred platforms for updates.
+
+### Returning Site Users
+
+- As a returning site user, I would like to receive email confirmation when I register, so that I can verify my account easily.
+- As a returning site user, I would like a secure login and registration process, so that I can protect my personal information.
+- As a returning site user, I would like a dashboard where I can view and manage my orders, so that I can track my purchases and manage my account.
+- As a returning site user, I would like to easily edit my personal information, so that I can update my details as needed.
+- As a returning site user, I would like to view the company's latest news, so that I can keep up to date with their products.
+- As a returning site user, I would like to be able to save products to buy later, without having to add them to my basket.
+
+### Site Admin
+
+- As a site administrator, I should be able to add new products.
+- As a site administrator, I should be able to edit existing products.
+- As a site administrator, I should be able to remove products.
+- As a site administrator, I should be able to add news articles.
+- As a site administrator, I should be able to edit existing news articles.
+- As a site administrator, I should be able to remove news articles.
 
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
@@ -92,7 +109,33 @@ This is the documentation for Roll & Resin - an ecommerce site aimed towards sel
 
 ### Scope
 
+Taking all of the above into account I decided I would need 14 main pages for the content of the site, outside of the Django allauth account pages. These would be included in templates across 6 Django apps:
 
+- __Home App__:
+  - __Home Page__: When users first navigate to the site they are taken to the `index.html` page, where they can view the navigation at the top of the page, along with a call to action button that sends them to the main products page.
+
+- __Products App__:
+  - __Products__: This page lists all the products available on the site. Users can browse, search, and filter products based on various criteria.
+  - __Product Description__: This page provides detailed information about a specific product. It includes images, descriptions, prices, and ratings. Users can also add the product to their cart or wishlist from this page.
+  - __Add Product__: This page is used by administrators or authorized users to add a new product to the site. It includes fields for the product name, description, price, images, and other relevant details.
+  - __Edit Product__: This page allows administrators or authorized users to edit the details of an existing product. It is similar to the add product page but pre-populates the fields with the current product information.
+  - __Wishlist__: This page displays a list of products that the user has added to their wishlist. Users can view, remove, or move items to their cart from this page.
+
+- __Bag App__:
+  - __Bag__: This page shows the contents of the user's shopping bag. Users can view the products they have added, update quantities, remove items, and see the total price before proceeding to checkout.
+
+- __Checkout App__:
+  - __Checkout__: This page is where users enter their shipping and payment information to complete their purchase. It includes fields for address, payment details, and order summary.
+  - __Checkout Success__: This page is displayed after a successful checkout process. It thanks the user for their purchase and provides an order summary and confirmation number.
+
+- __Profiles App__:
+  - __Profile__: This page allows users to view and edit their personal information, such as name, email, and address. It also displays the user's order history and other account-related details.
+
+- __News App__:
+  - __News__: This page lists all news articles or blog posts on the site. Users can browse through the latest news and updates.
+  - __News Item__: This page provides detailed information about a specific news article or blog post. It includes the full text, images, publication date, and author information.
+  - __Add News Item__: This page is used by administrators or authorized users to add a new news article or blog post. It includes fields for the title, content, images, and publication date.
+  - __Edit News Item__: This page allows administrators or authorized users to edit the details of an existing news article or blog post. It is similar to the add news item page but pre-populates the fields with the current information.
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
