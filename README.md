@@ -428,19 +428,228 @@ The site maintains a professional and uniform appearance by using a simple font,
 
 ## Deployment & Local Development
 
+The live deployed application can be found deployed on [Heroku](https://roll-and-resin-60438760f385.herokuapp.com).
 
+### ElephantSQL Database
+
+This project uses [ElephantSQL](https://www.elephantsql.com) for the PostgreSQL Database.
+
+To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
+
+- Click __Create New Instance__ to start a new database.
+- Provide a name (this is commonly the name of the project: tech-treasures).
+- Select the __Tiny Turtle (Free)__ plan.
+- You can leave the __Tags__ blank.
+- Select the __Region__ and __Data Center__ closest to you.
+- Once created, click on the new database name, where you can view the database URL and Password.
+
+### Amazon AWS
+
+This project uses [AWS](https://aws.amazon.com) to store media and static files online, due to the fact that Heroku doesn't persist this type of data.
+
+Once you've created an AWS account and logged-in, follow these series of steps to get your project connected.
+Make sure you're on the __AWS Management Console__ page.
+
+#### S3 Bucket
+
+- Search for __S3__.
+- Create a new bucket, give it a name (matching your Heroku app name), and choose the region closest to you.
+- Uncheck __Block all public access__, and acknowledge that the bucket will be public (required for it to work on Heroku).
+- From __Object Ownership__, make sure to have __ACLs enabled__, and __Bucket owner preferred__ selected.
+- From the __Properties__ tab, turn on static website hosting, and type `index.html` and `error.html` in their respective fields, then click __Save__.
+- From the __Permissions__ tab, paste in the following CORS configuration:
+
+  ```shell
+  [
+  	{
+  		"AllowedHeaders": [
+  			"Authorization"
+  		],
+  		"AllowedMethods": [
+  			"GET"
+  		],
+  		"AllowedOrigins": [
+  			"*"
+  		],
+  		"ExposeHeaders": []
+  	}
+  ]
+  ```
+- Copy your __ARN__ string.
+- From the __Bucket Policy__ tab, select the __Policy Generator__ link, and use the following steps:
+
+  - Policy Type: __S3 Bucket Policy__
+  - Effect: __Allow__
+  - Principal: `*`
+  - Actions: __GetObject__
+  - Amazon Resource Name (ARN): __paste-your-ARN-here__
+  - Click __Add Statement__
+  - Click __Generate Policy__
+  - Copy the entire Policy, and paste it into the __Bucket Policy Editor__
+
+    ```shell
+    {
+    	"Id": "Policy1234567890",
+    	"Version": "2012-10-17",
+    	"Statement": [
+    		{
+    			"Sid": "Stmt1234567890",
+    			"Action": [
+    				"s3:GetObject"
+    			],
+    			"Effect": "Allow",
+    			"Resource": "arn:aws:s3:::your-bucket-name/*"
+    			"Principal": "*",
+    		}
+    	]
+    }
+    ```
+  - Before you click "Save", add `/*` to the end of the Resource key in the Bucket Policy Editor (like above).
+  - Click __Save__.
+- From the __Access Control List (ACL)__ section, click "Edit" and enable __List__ for __Everyone (public access)__, and accept the warning box.
+
+  - If the edit button is disabled, you need to change the __Object Ownership__ section above to __ACLs enabled__ (mentioned above).
+
+#### IAM
+
+Back on the AWS Services Menu, search for and open __IAM__ (Identity and Access Management).
+Once on the IAM page, follow these steps:
+
+- From __User Groups__, click __Create New Group__.
+  - Suggested Name: `group-roll-resin` (group + the project name)
+- Tags are optional, but you must click it to get to the __review policy__ page.
+- From __User Groups__, select your newly created group, and go to the __Permissions__ tab.
+- Open the __Add Permissions__ dropdown, and click __Attach Policies__.
+- Select the policy, then click __Add Permissions__ at the bottom when finished.
+- From the __JSON__ tab, select the __Import Managed Policy__ link.
+  - Search for __S3__, select the `AmazonS3FullAccess` policy, and then __Import__.
+  - You'll need your ARN from the S3 Bucket copied again, which is pasted into "Resources" key on the Policy.
+
+    ```shell
+    {
+    	"Version": "2012-10-17",
+    	"Statement": [
+    		{
+    			"Effect": "Allow",
+    			"Action": "s3:*",
+    			"Resource": [
+    				"arn:aws:s3:::your-bucket-name",
+    				"arn:aws:s3:::your-bucket-name/*"
+    			]
+    		}
+    	]
+    }
+    ```
+  - Click __Review Policy__.
+  - Suggested Name: `policy-roll-resin` (policy + the project name)
+  - Provide a description:
+
+    - "Access to S3 Bucket for tech-treasures static files."
+  - Click __Create Policy__.
+- From __User Groups__, click your "group-tech-treasures".
+- Click __Attach Policy__.
+- Search for the policy you've just created ("policy-tech-treasures") and select it, then __Attach Policy__.
+- From __User Groups__, click __Add User__.
+  - Suggested Name: `user-tech-treasures` (user + the project name)
+- For "Select AWS Access Type", select __Programmatic Access__.
+- Select the group to add your new user to: `group-tech-treasures`
+- Tags are optional, but you must click it to get to the __review user__ page.
+- Click __Create User__ once done.
+- You should see a button to __Download .csv__, so click it to save a copy on your system.
+  - __IMPORTANT__: once you pass this page, you cannot come back to download it again, so do it immediately!
+  - This contains the user's __Access key ID__ and __Secret access key__.
+  - `AWS_ACCESS_KEY_ID` = __Access key ID__
+  - `AWS_SECRET_ACCESS_KEY` = __Secret access key__
+
+#### Final AWS Setup
+
+- If Heroku Config Vars has `DISABLE_COLLECTSTATIC` still, this can be removed now, so that AWS will handle the static files.
+- Back within __S3__, create a new folder called: `media`.
+- Select any existing media images for your project to prepare them for being uploaded into the new folder.
+- Under __Manage Public Permissions__, select __Grant public read access to this object(s)__.
+- No further settings are required, so click __Upload__.
+
+### Stripe API
+
+This project uses [Stripe](https://stripe.com) to handle the ecommerce payments.
+
+Once you've created a Stripe account and logged-in, follow these series of steps to get your project connected.
+
+- From your Stripe dashboard, click to expand the "Get your test API keys".
+- You'll have two keys here:
+  - `STRIPE_PUBLIC_KEY` = Publishable Key (starts with __pk__)
+  - `STRIPE_SECRET_KEY` = Secret Key (starts with __sk__)
+
+As a backup, in case users prematurely close the purchase-order page during payment, we can include Stripe Webhooks.
+
+- From your Stripe dashboard, click __Developers__, and select __Webhooks__.
+- From there, click __Add Endpoint__.
+  - `https://roll-and-resin-60438760f385.herokuapp.com/checkout/wh/`
+- Click __receive all events__.
+- Click __Add Endpoint__ to complete the process.
+- You'll have a new key here:
+  - `STRIPE_WH_SECRET` = Signing Secret (Wehbook) Key (starts with __wh__)
 
 ### Heroku Deployment
 
+This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 
+Deployment steps are as follows, after account setup:
+
+- Select __New__ in the top-right corner of your Heroku Dashboard, and select __Create new app__ from the dropdown menu.
+- Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select __Create App__.
+- From the new app __Settings__, click __Reveal Config Vars__, and set your environment variables.
+
+| Key                       | Value                                                                  |
+| ------------------------- | ---------------------------------------------------------------------- |
+| `AWS_ACCESS_KEY_ID`     | user's own value                                                       |
+| `AWS_SECRET_ACCESS_KEY` | user's own value                                                       |
+| `DATABASE_URL`          | user's own value                                                       |
+| `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
+| `EMAIL_HOST_PASS`       | user's own value                                                       |
+| `EMAIL_HOST_USER`       | user's own value                                                       |
+| `SECRET_KEY`            | user's own value                                                       |
+| `STRIPE_PUBLIC_KEY`     | user's own value                                                       |
+| `STRIPE_SECRET_KEY`     | user's own value                                                       |
+| `STRIPE_WH_SECRET`      | user's own value                                                       |
+| `USE_AWS`               | True                                                                   |
+
+Heroku needs two additional files in order to deploy properly.
+
+- requirements.txt
+- Procfile
+
+You can install this project's __requirements__ (where applicable) using:
+
+- `pip3 install -r requirements.txt`
+
+If you have your own packages that have been installed, then the requirements file needs updated using:
+
+- `pip3 freeze --local > requirements.txt`
+
+The __Procfile__ can be created with the following command:
+
+- `echo web: gunicorn app_name.wsgi > Procfile`
+- *replace __app_name__ with the name of your primary Django app name; the folder where settings.py is located*
+
+For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
+
+Either:
+
+- Select __Automatic Deployment__ from the Heroku app.
+
+Or:
+
+- In the Terminal/CLI, connect to Heroku using this command: `heroku login -i`
+- Set the remote for Heroku: `heroku git:remote -a app_name` (replace *app_name* with your app name)
+- After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
+  - `git push heroku main`
+
+The project should now be connected and deployed to Heroku!
 
 ### Local Deployment
 
 This project can be cloned or forked in order to make a local copy on your own system.
-
-For either method, you will need to install any applicable packages found within the *requirements.txt* file.
-
-- `pip3 install -r requirements.txt`.
 
 #### How to Fork
 
@@ -463,6 +672,47 @@ You can clone the repository by following these steps:
 6. In your IDE Terminal, type the following command to clone my repository:
 	- `git clone https://github.com/Melody-Lisa/roll-and-resin.git`
 7. Press Enter to create your local clone.
+
+For either method, you will need to install any applicable packages found within the *requirements.txt* file.
+
+- `pip3 install -r requirements.txt`.
+
+You will need to create a new file called `env.py` at the root-level,
+and include the same environment variables listed above from the Heroku deployment steps. If you are using gitpod, you can add these variables under the __variables__ section of your __user settings__.
+
+Sample `env.py` file:
+
+```python
+import os
+
+os.environ.setdefault("AWS_ACCESS_KEY_ID", "user's own value")
+os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "user's own value")
+os.environ.setdefault("DATABASE_URL", "user's own value")
+os.environ.setdefault("EMAIL_HOST_PASS", "user's own value")
+os.environ.setdefault("EMAIL_HOST_USER", "user's own value")
+os.environ.setdefault("SECRET_KEY", "user's own value")
+os.environ.setdefault("STRIPE_PUBLIC_KEY", "user's own value")
+os.environ.setdefault("STRIPE_SECRET_KEY", "user's own value")
+os.environ.setdefault("STRIPE_WH_SECRET", "user's own value")
+
+# local environment only (do not include these in production/deployment!)
+os.environ.setdefault("DEBUG", "True")
+```
+
+Once the project is cloned or forked, in order to run it locally, you'll need to follow these steps:
+
+- Start the Django app: `python3 manage.py runserver`
+- Stop the app once it's loaded: `CTRL+C` or `⌘+C` (Mac)
+- Make any necessary migrations: `python3 manage.py makemigrations`
+- Migrate the data to the database: `python3 manage.py migrate`
+- Create a superuser: `python3 manage.py createsuperuser`
+- Load fixtures (if applicable): `python3 manage.py loaddata file-name.json` (repeat for each file)
+- Everything should be ready now, so run the Django app again: `python3 manage.py runserver`
+
+If you'd like to backup your database models, use the following command for each model you'd like to create a fixture for:
+
+- `python3 manage.py dumpdata your-model > your-model.json`
+- *repeat this action for each model you wish to backup*
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
