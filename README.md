@@ -385,23 +385,42 @@ The site maintains a professional and uniform appearance by using a simple font,
 
 ### Languages
 
-
+- HTML
+- CSS
+- Jquery
+- Javascript
+- Python
 
 ### Frameworks
 
+- [Django](https://www.djangoproject.com/) - Used as the primary web framework for backend development.
 
+- [Bootstrap v4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - Implemented for frontend styling and layout.
 
 ### Libraries
 
-
+- [Font Awesome](https://fontawesome.com/) - For the iconography on the website.
+- [Jinja](https://jinja.palletsprojects.com/en/3.1.x/) - Templating engine.
+- [Google Fonts](https://fonts.google.com/) - To import the fonts used on the website.
 
 ### Programs
 
-
+- [Flaticon](https://www.flaticon.com/free-icon/d20_6545894) - To create the favicon for the site.
+- [Figma](https://figma.com/) - For wireframes and other graphics in readme.
+- [Git](https://git-scm.com/) - For version control.
+- [Google Dev Tools](https://developers.google.com/web/tools/chrome-devtools) - To troubleshoot and test features, solve issues with responsiveness and styling.
+- [Heroku](https://www.heroku.com) - For website deployment.
+- [ElephantSQL]() - The database used for storing information for the site.
+- [Pip](https://pypi.org/project/pip/) - To install Python packages.
+- [Red Ketchup](https://redketchup.io/image-resizer) - To convert background image to webp format.
 
 ### Testing and Validation Tools
 
-
+- Samsung Talkback - To test accessibility.
+- [JS Hint](https://jshint.com/) - To check the JavaScript code for errors.
+- [UI.dev](https://ui.dev/amiresponsive) - To show the site on a range of screen sizes.
+- [W3C Markup Validation Service](https://validator.w3.org/) - To validate HTML and CSS code.
+- [CI Python Linter](https://pep8ci.herokuapp.com) - To Validate python code.
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
