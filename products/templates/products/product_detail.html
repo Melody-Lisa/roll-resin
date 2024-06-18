@@ -33,12 +33,12 @@
                             <!-- Add/Remove Wishlist items -->
                             {% if in_wishlist %}
                             <a href="{% url 'remove_product_from_wishlist' product.id %}"
-                                class="btn btn-link text-danger">
+                                class="btn btn-link text-danger btn-lg">
                                 <i class="fas fa-heart"></i>
                             </a>
                             {% else %}
                             <a href="{% url 'add_product_to_wishlist' product.id %}"
-                                class="btn btn-link text-danger text-right">
+                                class="btn btn-link text-danger text-right btn-lg">
                                 <i class="far fa-heart"></i>
                             </a>
                             {% endif %}
@@ -122,19 +122,19 @@
                                     </div>
                                 </div>
 
-                                <div class="col-12">
+                                <div class="col-12 d-flex justify-content-between mt-5">
                                     <input type="submit"
-                                        class="btn bg-dark text-white btn-up rounded-0 text-uppercase mt-5"
+                                        class="btn bg-dark text-white border-white btn-up text-uppercase mr-2"
                                         value="Add to Bag">
-
+                                
                                     <a href="{% url 'products' %}"
-                                        class="btn border-black box-shadow btn-dark rounded-0 mt-5">
+                                        class="btn form-button text-uppercase" style="min-width: 200px;">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
+                                        <span>Keep Shopping</span>
                                     </a>
-                                </div>
+                                </div>                                
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </form>
 
