@@ -550,9 +550,9 @@ Once on the IAM page, follow these steps:
 - Click __Attach Policy__.
 - Search for the policy you've just created ("policy-tech-treasures") and select it, then __Attach Policy__.
 - From __User Groups__, click __Add User__.
-  - Suggested Name: `user-tech-treasures` (user + the project name)
+  - Suggested Name: `user-roll-resin` (user + the project name)
 - For "Select AWS Access Type", select __Programmatic Access__.
-- Select the group to add your new user to: `group-tech-treasures`
+- Select the group to add your new user to: `group-roll-resin`
 - Tags are optional, but you must click it to get to the __review user__ page.
 - Click __Create User__ once done.
 - You should see a button to __Download .csv__, so click it to save a copy on your system.
@@ -738,7 +738,9 @@ Please see [TESTING.md](TESTING.md) for all testing elements of this site.
 
 ### Media
 
+* [Dreamstime](https://www.dreamstime.com/photos-images/dungeons-dragons-dice-background.html) - Stock photos used for the background image and news image.
 
+* All product images are the property of the developer.
 
 ### Acknowledgements
 
