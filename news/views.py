@@ -42,7 +42,8 @@ def add_news_item(request):
             form_data = news_form.save(commit=False)
             form_data.user = request.user
             form_data.save()
-            messages.success(request, 'Your news item was posted successfully!')
+            messages.success(
+                request, 'Your news item was posted successfully!')
             return redirect('news_items')
         else:
             messages.error(
@@ -67,13 +68,16 @@ def edit_news_item(request, news_item_id):
 
     news_item_to_edit = get_object_or_404(News, pk=news_item_id)
     if request.method == 'POST':
-        news_form = NewsForm(request.POST, request.FILES, instance=news_item_to_edit)
+        news_form = NewsForm(
+            request.POST, request.FILES, instance=news_item_to_edit)
         if news_form.is_valid():
             news_form.save()
             messages.success(request, 'Successfully updated news item!')
             return redirect(reverse('news_item', args=[news_item_to_edit.id]))
         else:
-            messages.error(request, 'Failed to update news item. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update news item. Please ensure the form is valid.')
     else:
         news_form = NewsForm(instance=news_item_to_edit)
         messages.info(request, f'You are editing {news_item_to_edit}')

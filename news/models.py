@@ -8,6 +8,7 @@ STATUS = (
     (1, "Published")
 )
 
+
 class News(models.Model):
     """
     This model is for a news item

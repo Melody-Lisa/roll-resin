@@ -46,7 +46,8 @@ def all_products(request):
                                ("You didn't enter any search criteria!"))
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = (
+              Q(name__icontains=query) | Q(description__icontains=query))
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -64,7 +65,7 @@ def all_products(request):
 def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     in_wishlist = False
-    
+
     if request.user.is_authenticated:
         try:
             wishlist = Wishlist.objects.get(user=request.user)
@@ -72,7 +73,7 @@ def product_detail(request, product_id):
                 in_wishlist = True
         except Wishlist.DoesNotExist:
             pass
-    
+
     context = {
         'product': product,
         'in_wishlist': in_wishlist,
@@ -94,10 +95,12 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -121,7 +124,9 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update product. Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -181,7 +186,7 @@ def add_product_to_wishlist(request, product_id):
     else:
         wishlist.products.add(product)
         messages.info(request, 'Added the product to your wishlist')
-    
+
     return redirect('product_detail', product_id=product_id)
 
 

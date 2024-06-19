@@ -1,7 +1,6 @@
 from django.contrib import admin
 from .models import Product, Category, Wishlist
 
-# Register your models here.
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
@@ -14,6 +13,7 @@ class ProductAdmin(admin.ModelAdmin):
     )
 
     ordering = ('sku',)
+
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
@@ -28,6 +28,7 @@ class WishlistAdmin(admin.ModelAdmin):
     def get_products(self, obj):
         return ", ".join([str(product) for product in obj.products.all()])
     get_products.short_description = 'Products'
+
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
