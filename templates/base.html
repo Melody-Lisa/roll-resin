@@ -45,9 +45,9 @@
 <body>
   <div class="page welcome-overlay">
     <header class="container-fluid fixed-top">
-      <div id="topnav" class="row bg-dark pt-lg-2 d-none d-lg-flex">
+      <div id="topnav" class="row bg-dark pt-lg-2 d-none d-lg-flex text-white">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-          <a href="{% url 'home' %}" class="nav-link main-logo-link hover-underline-animation">
+          <a href="{% url 'home' %}" class="nav-link hover-underline-animation">
             <h2 class="logo-font my-0">Roll & Resin</h2>
           </a>
         </div>
@@ -56,7 +56,7 @@
           <form method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
               <input class="form-control border border-black
-             text-red text-shadow bg-dark box-shadow" type="text" name="q" placeholder="Search our site">
+             text-shadow bg-dark box-shadow text-white" type="text" name="q" placeholder="Search our site">
               <div class="input-group-append">
                 <button class="form-control btn form-button" type="submit">
                   <span class="icon">
@@ -71,11 +71,11 @@
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-shadow text-lg-right my-0">
             <li class="list-inline-item dropdown">
-              <a class="text-red nav-link hover-underline-animation" href="#" id="user-options" data-toggle="dropdown"
+              <a class="nav-link hover-underline-animation" href="#" id="user-options" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <div class="text-center welcome-font">
-                  <div><i class="fas fa-user fa-lg text-red"></i></div>
-                  <p class="my-0 text-red">My Account</p>
+                  <div><i class="fas fa-user fa-lg"></i></div>
+                  <p class="my-0">My Account</p>
                 </div>
               </a>
               <div class="dropdown-menu border-0 bg-dark shade-invert text-shadow" aria-labelledby="user-options">
@@ -94,11 +94,11 @@
               </div>
             </li>
             <li class="list-inline-item">
-              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link hover-underline-animation"
+              <a class="{% if grand_total %}text-info font-weight-bold{% else %}font-weight-normal{% endif %} nav-link hover-underline-animation"
                 href="{% url 'view_bag' %}">
                 <div class="text-center welcome-font">
-                  <div><i class="fas fa-shopping-bag fa-lg text-red"></i></div>
-                  <p class="my-0 text-red">
+                  <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                  <p class="my-0">
                     {% if grand_total %}
                     £{{ grand_total|floatformat:2 }}
                     {% else %}
@@ -116,7 +116,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark w-100">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
             aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span><i class="fa-solid fa-bars text-red"></i></span>
+            <span><i class="fa-solid fa-bars"></i></span>
           </button>
           {% include 'includes/mobile-top-header.html' %}
           {% include 'includes/main-nav.html' %}
@@ -162,8 +162,11 @@
             <span><i role="img" aria-label="copyright Melody Lisa" class="far fa-copyright text-light"></i></span>
             <span class="d-none d-sm-inline text-light"><em> Melody Lisa 2024</em></span>
           </div>
-          <div class="col-12 col-sm-6 d-flex justify-content-end">
-            <!-- Socials here -->
+          <div class="col-12 col-sm-6 d-flex socials justify-content-end">
+            <a class="linked" target="_blank" aria-label="LinkedIn" href="http://www.linkedin.com/in/melodyshutt"><i
+                class="fa-brands fa-linkedin fa-lg mx-3"></i></a>
+            <a class="git" target="_blank" aria-label="GitHub" href="https://github.com/Melody-Lisa"><i
+                class="fa-brands fa-github fa-lg mx-3"></i></a>
           </div>
         </div>
       </div>
