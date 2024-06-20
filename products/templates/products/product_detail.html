@@ -105,9 +105,8 @@
                                                     </button>
                                                 </div>
                                                 <input class="form-control qty_input" type="number" name="quantity"
-                                                       value="1" min="1" max="99"
-                                                       data-item_id="{{ product.id }}"
-                                                       id="id_qty_{{ product.id }}">
+                                                    value="1" min="1" max="99" data-item_id="{{ product.id }}"
+                                                    id="id_qty_{{ product.id }}">
                                                 <div class="input-group-append">
                                                     <button class="increment-qty btn-dark btn btn-up rounded-0"
                                                         data-item_id="{{ product.id }}"
@@ -122,24 +121,25 @@
                                     </div>
                                 </div>
 
-                                <div class="col-12 d-flex justify-content-between mt-5">
+                                <div class="col-12 col-sm-6 d-flex mt-2 justify-content-center">
                                     <input type="submit"
                                         class="btn bg-dark text-white border-white btn-up text-uppercase mr-2"
                                         value="Add to Bag">
-                                
-                                    <a href="{% url 'products' %}"
-                                        class="btn form-button text-uppercase" style="min-width: 200px;">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span>Keep Shopping</span>
-                                    </a>
-                                </div>                                
+                                </div>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </form>
 
                         </div>
                     </div>
+                </div>
+                <div class="row d-flex mt-2 justify-content-start">
+                    <a href="{% url 'products' %}" class="btn form-button text-uppercase"
+                        style="min-width: 200px;">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span>Keep Shopping</span>
+                    </a>
                 </div>
             </div>
         </div>
