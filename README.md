@@ -12,9 +12,10 @@ This is the documentation for Roll & Resin - an ecommerce site aimed towards sel
 
 * [User Experience (UX)](#user-experience---ux)
   * [Strategy](#strategy)
-    * [User Goals](#user-goals)
-    * [Site Admin Goals](#site-admin-goals)
     * [User Stories](#user-stories)
+      *[New Site Users](#new-site-users)
+      *[Returning Site Users](#returning-site-users)
+      *[Site Admin](#site-users-admin)
   * [Scope](#scope)
   * [Structure](#structure)
     * [Site Structure](#site-structure)
@@ -34,7 +35,6 @@ This is the documentation for Roll & Resin - an ecommerce site aimed towards sel
       * [Register](#register)
       * [Log In](#log-in)
       * [Profile](#profile)
-      * [Community](#community)
       * [Admin Pages](#admin-pages)
       * [404 Page](#404-page)
     * [Defensive Programming](#defensive-programming)
@@ -165,7 +165,7 @@ Taking all of the above into account I decided I would need 14 main pages for th
 
 #### Database Structure
 
-
+![Blank diagram](https://github.com/Melody-Lisa/roll-resin/assets/137832068/18504e1e-d259-4698-863e-d8010032f4d2)
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
@@ -194,7 +194,7 @@ For the user interface design of the website, dark mode Bootstrap stylings have 
 
 2. __Color Scheme__:
    - __Red and Green__: These colors are chosen to align with the official Dungeons and Dragons branding, providing a familiar yet distinct look.
-     - __Red__: This color has been used for main headings and call to action buttons.
+     - __Red__: This color has been used for call to action buttons.
      - __Green__: This colour has been used for secondary headings, muted text and hover effects over call to action buttons, turning them green from red to encourage them to go!
    - __Balancing the Colors__: While integrating red and green, care will be taken to avoid overwhelming the user with too many contrasting colors. The primary focus will be on creating a harmonious balance that enhances readability and usability with the main content text being white for maximum readability.
 
@@ -229,14 +229,58 @@ Fonts have been imported from [Google Fonts](https://fonts.google.com/).
 
 #### Navbar
 
+<details>
+  <summary>Desktop Navigation</summary>
 
+  ![Desktop Navigation](https://github.com/Melody-Lisa/roll-resin/assets/137832068/269f163e-8f83-4588-8107-c6556eec632d)
+
+  Description: This is the desktop navigation view for Roll & Resin.
+</details>
+
+<details>
+  <summary>Mobile Navigation (Open)</summary>
+
+  ![Mobile Navigation (Open)](https://github.com/Melody-Lisa/roll-resin/assets/137832068/815ebbc8-333d-4757-b4a8-641fd2166f5c)
+
+  Description: This is the mobile navigation when it is open for Roll & Resin.
+</details>
+
+<details>
+  <summary>Mobile Navigation (Closed)</summary>
+
+  ![Mobile Navigation (Closed)](https://github.com/Melody-Lisa/roll-resin/assets/137832068/7ac9ba60-8f7d-44e3-9887-53a9ab5cc526)
+
+  Description: This is the mobile navigation when it is closed for Roll & Resin.
+</details>
 
 #### Footer
 
+<details>
+  <summary>Footer Navigation (Desktop)</summary>
 
+  ![Footer Navigation (Desktop)](https://github.com/Melody-Lisa/roll-resin/assets/137832068/c708ac40-822b-4374-a58a-bd829687a6be)
+
+  Description: This image shows the footer navigation for Roll & Resin on desktop.
+</details>
+
+<details>
+  <summary>Footer Navigation (Mobile)</summary>
+
+  ![Footer Navigation (Mobile)](https://github.com/Melody-Lisa/roll-resin/assets/137832068/0a00dab0-1f50-42c3-9ff8-ed105e435c54)
+
+  Description: This image shows the footer navigation for Roll & Resin on mobile.
+</details>
 
 #### Home
 
+<img width="692" alt="rollresinresponsivehome" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/c8b3492e-d640-4b26-93a9-d6c0003156e3">
+
+#### Products
+
+<img width="49" alt="rollresinproductsbacktotop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/ec20fd54-8a6c-4b60-b150-a2eab9d4bf84">
+<img width="624" alt="rollresinproductscategory" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/245da644-9ca2-40b3-86ef-75ca9584c7dc">
+<img width="626" alt="rollresinproductssearch" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/02617a31-0e0e-4216-b041-c0b18f48edd8">
+<img width="628" alt="rollresinproductssort" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/3aa0ad98-d4b7-4a6d-916e-ab0b073b585b">
 
 
 ## Defensive Programming
