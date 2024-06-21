@@ -195,18 +195,6 @@ a.hover-underline-animation:hover {
     color: white;
 }
 
-.navbar-nav .nav-link,
-.nav-link.d-block.d-lg-none .fas,
-.shopping-total {
-    color: white !important;
-}
-
-.navbar-nav .nav-link:hover,
-.nav-link.d-block.d-lg-none .fas:hover,
-.shopping-total:hover {
-    color: red !important;
-}
-
 .form-control::placeholder {
     color: white;
 }
@@ -216,8 +204,10 @@ a.hover-underline-animation:hover {
 }
 
 .text-green,
-.text-muted {
+.text-muted,
+.text-success {
     color: green !important;
+    text-shadow: 5px 5px 5px white !important;
 }
 
 .text-yellow {
