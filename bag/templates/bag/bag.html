@@ -41,16 +41,10 @@
                                 {% for item in bag_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        {% if product.image %}
-                                        <a href="{{ product.image.url }}" target="_blank">
-                                            <img class="card-img-top img-fluid" src="{{ product.image.url }}"
-                                                alt="{{ product.name }}">
-                                        </a>
+                                        {% if item.product.image %}
+                                        <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                                         {% else %}
-                                        <a href="">
-                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                                alt="{{ product.name }}">
-                                        </a>
+                                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                         {% endif %}
                                     </td>
                                     <td class="py-3 text-white">
