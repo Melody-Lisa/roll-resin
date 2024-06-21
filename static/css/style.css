@@ -207,7 +207,6 @@ a.hover-underline-animation:hover {
 .text-muted,
 .text-success {
     color: green !important;
-    text-shadow: 5px 5px 5px white !important;
 }
 
 .text-yellow {
