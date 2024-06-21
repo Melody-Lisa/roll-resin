@@ -11,6 +11,7 @@ body {
     background: url('/media/dice-background2.webp') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Sedan';
+    color: white;
 }
 
 .page {
@@ -140,12 +141,20 @@ a.hover-underline-animation:hover {
     Dropdown Menu Styles
 ---------------------------------------*/
 
-.dropdown-menu.border-0.background-black a.dropdown-item {
+.dropdown-menu {
+    border: white solid 1px;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-menu.background-black a.dropdown-item {
     background-color: transparent; /* Set background color to transparent */
     color: white; /* Set text color */
 }
 
-.dropdown-menu.border-0.background-black a.dropdown-item:hover {
+.dropdown-menu.background-black a.dropdown-item:hover {
     background-color: transparent; /* Keep background color transparent on hover */
     font-weight: bold;
 }
@@ -154,7 +163,8 @@ a.hover-underline-animation:hover {
     Navbar Styles
 ---------------------------------------*/
 
-.navbar-toggler-icon {
+.fa-bars,
+.list-inline-item, a {
     color: white;
 }
 
@@ -192,7 +202,7 @@ a.hover-underline-animation:hover {
 }
 
 .nav-item a {
-    color: white;
+    color: white !important;
 }
 
 .form-control::placeholder {

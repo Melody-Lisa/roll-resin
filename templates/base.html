@@ -78,7 +78,7 @@
                   <p class="my-0">My Account</p>
                 </div>
               </a>
-              <div class="dropdown-menu border-0 bg-dark shade-invert text-shadow" aria-labelledby="user-options">
+              <div class="dropdown-menu bg-dark text-shadow" aria-labelledby="user-options">
                 {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
                 <a href="{% url 'add_product' %}" class="dropdown-item hover-underline-animation">Product Management</a>
