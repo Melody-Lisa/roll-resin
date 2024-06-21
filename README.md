@@ -221,67 +221,96 @@ Fonts have been imported from [Google Fonts](https://fonts.google.com/).
 
 ## Features
 
-### Site Features
-
-#### Favicon
+### Favicon
 
 ![Roll & Resin Favicon](media/rollresinfavicon.png)
 
-#### Navbar
+### Navbar
 
 <details>
-  <summary>Desktop Navigation</summary>
+<summary>Navbar with Links</summary>
+<img width="913" alt="rollresinnav" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/269f163e-8f83-4588-8107-c6556eec632d">
 
-  ![Desktop Navigation](https://github.com/Melody-Lisa/roll-resin/assets/137832068/269f163e-8f83-4588-8107-c6556eec632d)
-
-  Description: This is the desktop navigation view for Roll & Resin.
+- Description: This image shows the desktop navigation bar with visible links.
 </details>
 
 <details>
-  <summary>Mobile Navigation (Open)</summary>
+<summary>Mobile Navbar Open</summary>
+<img width="292" alt="rollresinmobilenavopen" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/815ebbc8-333d-4757-b4a8-641fd2166f5c">
 
-  ![Mobile Navigation (Open)](https://github.com/Melody-Lisa/roll-resin/assets/137832068/815ebbc8-333d-4757-b4a8-641fd2166f5c)
+- Description: This image displays the mobile navigation bar with the menu expanded and menu items visible.
 
-  Description: This is the mobile navigation when it is open for Roll & Resin.
 </details>
 
 <details>
-  <summary>Mobile Navigation (Closed)</summary>
+<summary>Mobile Navbar Closed</summary>
+<img width="293" alt="rollresinmobilenavclosed" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/7ac9ba60-8f7d-44e3-9887-53a9ab5cc526">
 
-  ![Mobile Navigation (Closed)](https://github.com/Melody-Lisa/roll-resin/assets/137832068/7ac9ba60-8f7d-44e3-9887-53a9ab5cc526)
-
-  Description: This is the mobile navigation when it is closed for Roll & Resin.
+- Description: This image shows the mobile navigation bar with the menu collapsed, displaying the menu icon.
 </details>
 
-#### Footer
+### Footer
 
 <details>
-  <summary>Footer Navigation (Desktop)</summary>
+<summary>Desktop Footer</summary>
+<img width="908" alt="rollresinfooter" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/c708ac40-822b-4374-a58a-bd829687a6be">
 
-  ![Footer Navigation (Desktop)](https://github.com/Melody-Lisa/roll-resin/assets/137832068/c708ac40-822b-4374-a58a-bd829687a6be)
-
-  Description: This image shows the footer navigation for Roll & Resin on desktop.
+- Description: This image displays the desktop version of the footer on the website.
 </details>
 
 <details>
-  <summary>Footer Navigation (Mobile)</summary>
+<summary>Mobile Footer</summary>
+<img width="293" alt="rollresinfootermobile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/0a00dab0-1f50-42c3-9ff8-ed105e435c54">
 
-  ![Footer Navigation (Mobile)](https://github.com/Melody-Lisa/roll-resin/assets/137832068/0a00dab0-1f50-42c3-9ff8-ed105e435c54)
-
-  Description: This image shows the footer navigation for Roll & Resin on mobile.
+- Description: This image shows the mobile version of the footer on the website.
 </details>
 
-#### Home
+### Home
 
 <img width="692" alt="rollresinresponsivehome" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/c8b3492e-d640-4b26-93a9-d6c0003156e3">
 
-#### Products
+### Products
 
+<details>
+<summary>Responsive Products Display</summary>
+<img width="686" alt="rollresinresponsiveproducts" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/1a42dade-f0ee-474a-a351-ba2980e0b45f">
+
+- Description: This image showcases a responsive display of products on the website.
+</details>
+
+<details>
+<summary>Back to Top Button</summary>
 <img width="49" alt="rollresinproductsbacktotop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/ec20fd54-8a6c-4b60-b150-a2eab9d4bf84">
+
+- Description: This image shows a back to top button on the product page.
+</details>
+
+<details>
+<summary>Products by Category</summary>
 <img width="624" alt="rollresinproductscategory" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/245da644-9ca2-40b3-86ef-75ca9584c7dc">
+
+- Description: This image displays products organized by category on the website.
+</details>
+
+<details>
+<summary>Product Search</summary>
 <img width="626" alt="rollresinproductssearch" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/02617a31-0e0e-4216-b041-c0b18f48edd8">
+
+- Description: This image shows the product search functionality on the website.
+</details>
+
+<details>
+<summary>Sorting Products</summary>
 <img width="628" alt="rollresinproductssort" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/3aa0ad98-d4b7-4a6d-916e-ab0b073b585b">
 
+- Description: This image demonstrates sorting options for products on the website.
+</details>
+
+#### Product Details
+
+<img width="643" alt="rollresindetails" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/e3153f58-5e32-4093-b4f1-6db58d677582">
+
+#### Bag
 
 ## Defensive Programming
 
@@ -481,7 +510,7 @@ This project uses [ElephantSQL](https://www.elephantsql.com) for the PostgreSQL 
 To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
 
 - Click __Create New Instance__ to start a new database.
-- Provide a name (this is commonly the name of the project: tech-treasures).
+- Provide a name (this is commonly the name of the project).
 - Select the __Tiny Turtle (Free)__ plan.
 - You can leave the __Tags__ blank.
 - Select the __Region__ and __Data Center__ closest to you.
@@ -590,9 +619,9 @@ Once on the IAM page, follow these steps:
 
     - "Access to S3 Bucket for tech-treasures static files."
   - Click __Create Policy__.
-- From __User Groups__, click your "group-tech-treasures".
+- From __User Groups__, click your "group-roll-resin".
 - Click __Attach Policy__.
-- Search for the policy you've just created ("policy-tech-treasures") and select it, then __Attach Policy__.
+- Search for the policy you've just created ("policy-roll-resin") and select it, then __Attach Policy__.
 - From __User Groups__, click __Add User__.
   - Suggested Name: `user-roll-resin` (user + the project name)
 - For "Select AWS Access Type", select __Programmatic Access__.
