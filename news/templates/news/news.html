@@ -23,7 +23,7 @@
 
                 <div class="row">
                     {% for news_item in news_items_published %}
-                    <div class="col-sm-6 col-md-6 mb-4">
+                    <div class="col-12 col-md-6 mb-4">
                         <div class="card h-100 border-0 bg-dark text-white">
                             {% if news_item.image %}
                             <a href="{% url 'news_item' news_item.id %}">
@@ -58,7 +58,7 @@
                     <!-- Show draft items to admin -->
                     {% if request.user.is_superuser %}
                     {% for news_item in news_items_drafts %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
+                    <div class="col-12 col-md-6 mb-4">
                         <div class="card h-100 border-0 bg-dark text-white">
                             {% if news_item.image %}
                             <a href="{% url 'news_item' news_item.id %}">
