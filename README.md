@@ -13,9 +13,9 @@ This is the documentation for Roll & Resin - an ecommerce site aimed towards sel
 * [User Experience (UX)](#user-experience---ux)
   * [Strategy](#strategy)
     * [User Stories](#user-stories)
-      *[New Site Users](#new-site-users)
-      *[Returning Site Users](#returning-site-users)
-      *[Site Admin](#site-users-admin)
+      * [New Site Users](#new-site-users)
+      * [Returning Site Users](#returning-site-users)
+      * [Site Admin](#site-admin)
   * [Scope](#scope)
   * [Structure](#structure)
     * [Site Structure](#site-structure)
@@ -27,17 +27,16 @@ This is the documentation for Roll & Resin - an ecommerce site aimed towards sel
     * [Typography](#typography)
     * [Colours](#colours)
 * [Features](#features)
-    * [Site Features](#site-features)
-      * [Favicon](#favicon)
-      * [Navbar](#navbar)
-      * [Footer](#footer)
-      * [Home](#home)
-      * [Register](#register)
-      * [Log In](#log-in)
-      * [Profile](#profile)
-      * [Admin Pages](#admin-pages)
-      * [404 Page](#404-page)
-    * [Defensive Programming](#defensive-programming)
+  * [Favicon](#favicon)
+  * [Navbar](#navbar)
+  * [Footer](#footer)
+  * [Home](#home)
+  * [Register](#register)
+  * [Log In](#log-in)
+  * [Profile](#profile)
+  * [Admin Pages](#admin-pages)
+  * [404 Page](#404-page)
+* [Defensive Programming](#defensive-programming)
 * [Future Implementations](#future-implementations)
 * [Accessibility](#accessibility)
   * [Alt Text](#alt-text)
@@ -116,7 +115,7 @@ Taking all of the above into account I decided I would need 14 main pages for th
 
 - __Products App__:
   - __Products__: This page lists all the products available on the site. Users can browse, search, and filter products based on various criteria.
-  - __Product Description__: This page provides detailed information about a specific product. It includes images, descriptions, prices, and ratings. Users can also add the product to their cart or wishlist from this page.
+  - __Product Details__: This page provides detailed information about a specific product. It includes images, descriptions, prices, and ratings. Users can also add the product to their cart or wishlist from this page.
   - __Add Product__: This page is used by administrators or authorized users to add a new product to the site. It includes fields for the product name, description, price, images, and other relevant details.
   - __Edit Product__: This page allows administrators or authorized users to edit the details of an existing product. It is similar to the add product page but pre-populates the fields with the current product information.
   - __Wishlist__: This page displays a list of products that the user has added to their wishlist. Users can view, remove, or move items to their cart from this page.
@@ -306,11 +305,49 @@ Fonts have been imported from [Google Fonts](https://fonts.google.com/).
 - Description: This image demonstrates sorting options for products on the website.
 </details>
 
-#### Product Details
+### Product Details
 
 <img width="643" alt="rollresindetails" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/e3153f58-5e32-4093-b4f1-6db58d677582">
 
-#### Bag
+### Wishlist
+
+<details>
+  <summary>Wishlist Item Not Added</summary>
+  <img width="218" alt="rollresinwishlistno" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/901fb705-e1ce-4bfe-bd3d-3a466ea52ef0">
+</details>
+
+<details>
+  <summary>Wishlist Item Added</summary>
+  <img width="208" alt="rollresinwishlistyes" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/127d42ab-2792-4dc1-97ca-7f59d63640c5">
+</details>
+
+<details>
+  <summary>Wishlist Toast Notification - Item Added</summary>
+  <img width="176" alt="rollresinwishlisttoast" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/dbc33c49-a621-4539-86aa-cb2641d37f35">
+</details>
+
+<details>
+  <summary>Wishlist Toast Notification - Item Removed</summary>
+  <img width="214" alt="rollresinwishlisttoastremoved" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/602c9b63-1c0a-4f6d-a835-d98d65e667f2">
+</details>
+
+<details>
+  <summary>Wishlist Page</summary>
+  <img width="441" alt="rollresinwishlist" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/338270d1-2938-4e21-b4ba-b037f7c0a85a">
+</details>
+
+### Bag
+
+<details>
+  <summary>Bag Toast Notification</summary>
+  <img width="278" alt="rollresinbagtoast" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/941e190a-d3d9-4f09-9aba-849bfdcbc203">
+</details>
+
+<details>
+  <summary>Bag Page</summary>
+  <img width="456" alt="rollresinbag" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/ced62cde-76df-4b7d-bedc-6b3f100b0454">
+</details>
+
 
 ## Defensive Programming
 
