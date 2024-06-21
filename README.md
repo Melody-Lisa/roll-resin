@@ -348,6 +348,19 @@ Fonts have been imported from [Google Fonts](https://fonts.google.com/).
   <img width="456" alt="rollresinbag" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/ced62cde-76df-4b7d-bedc-6b3f100b0454">
 </details>
 
+### Checkout
+
+### Profile
+
+### News
+
+### Register
+
+### Log In
+
+### Log Out
+
+### Admin
 
 ## Defensive Programming
 
