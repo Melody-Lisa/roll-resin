@@ -383,11 +383,140 @@ Fonts have been imported from [Google Fonts](https://fonts.google.com/).
 
 ### Register
 
+<details>
+<summary>Registration Page</summary>
+
+![rollresinregister](https://github.com/Melody-Lisa/roll-resin/assets/137832068/0f5356f7-a3e8-40d7-9f11-ad81ae2242b5)
+</details>
+
+<details>
+<summary>Registration Verification Email</summary>
+
+![rollresinregisterverify](https://github.com/Melody-Lisa/roll-resin/assets/137832068/84cc3acb-fd1a-4dc7-9267-f8c764abe3d3)
+</details>
+
+<details>
+<summary>Registration Auth Toast</summary>
+
+![rollresinregisterauthtoast](https://github.com/Melody-Lisa/roll-resin/assets/137832068/36835e29-ae38-4edc-9dc6-94eee3d7d84f)
+</details>
+
+
 ### Log In
+
+<details>
+<summary>Login Page</summary>
+
+![rollresinlogin](https://github.com/Melody-Lisa/roll-resin/assets/137832068/89ebd195-53a9-422e-bf02-0a7f9d43bb0a)
+</details>
+
+<details>
+<summary>Password Reset Form</summary>
+
+![rollresinloginpasswordreset](https://github.com/Melody-Lisa/roll-resin/assets/137832068/1b10f702-a1dc-4ff4-8b52-44d8849ff148)
+</details>
+
+<details>
+<summary>Password Reset Sent Toast</summary>
+
+![rollresinloginpasswordresetsent](https://github.com/Melody-Lisa/roll-resin/assets/137832068/33a01f08-448f-4d32-ab5a-f700ee9d4a9e)
+</details>
+
+<details>
+<summary>Login Success Toast</summary>
+
+![rollresinloginsuccesstoast](https://github.com/Melody-Lisa/roll-resin/assets/137832068/3a085f0e-568e-4226-8a4a-5c1a7627c5c7)
+</details>
+
 
 ### Log Out
 
+<img width="379" alt="rollresinlogout" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/e7f35ef3-e8b1-4564-8755-0f23f61f0580">
+
 ### Admin
+
+#### Admin Account Navigation
+
+<details>
+<summary>Admin Account Navigation</summary>
+
+<img width="164" alt="rollresinadminaccountnav" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/c539b755-d836-424d-901f-1089fc4d1c1b">
+
+</details>
+
+#### Admin Products
+
+<details>
+<summary>Admin Product Deleted Toast</summary>
+
+<img width="375" alt="rollresinadminproductdeletedtoast" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/e0be236d-40ef-4204-b70e-d557435164d2">
+
+</details>
+
+<details>
+<summary>Admin Product Details</summary>
+
+<img width="409" alt="rollresinadminproductdetails" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/8b69e3ff-a1d4-4ba7-9237-98a5d68c1635">
+
+</details>
+
+<details>
+<summary>Admin Product Edit Toast</summary>
+
+<img width="179" alt="rollresinadminproductedittoast" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/3f4ef50e-2358-4028-9f9f-9106cc8998a9">
+
+</details>
+
+<details>
+<summary>Admin Product Edit</summary>
+
+<img width="263" alt="rollresinadminproductedit" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/5f3e86fa-9094-429e-9467-f8e426c85249">
+
+</details>
+
+<details>
+<summary>Admin Product Edit Success Toast</summary>
+
+<img width="164" alt="rollresinadminproducteditsuccesstoast" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/d9aa66bf-edfa-4703-8192-7339a1c04484">
+
+</details>
+
+#### Admin News
+
+<details>
+<summary>Admin News Add</summary>
+
+<img width="499" alt="rollresinadminnewsadd" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/e61ed6aa-786c-433e-bf06-ea3022b7520c">
+
+</details>
+
+<details>
+<summary>Admin News Added Toast</summary>
+
+<img width="209" alt="rollresinadminnewsaddedtoast" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/d5b7f575-6b7c-4a0b-aa71-8ee2f83a2ed0">
+
+</details>
+
+<details>
+<summary>Admin News Edit Toast</summary>
+
+<img width="164" alt="rollresinadminnewsedittoast" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/38acedaa-5d87-4def-b4c1-491b453e2aa0">
+
+</details>
+
+<details>
+<summary>Admin News Edit</summary>
+
+<img width="541" alt="rollresinadminnewsedit" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/2962f3cb-687f-4ff9-87db-e1d97449de60">
+
+</details>
+
+<details>
+<summary>Admin News Updated Toast</summary>
+
+<img width="179" alt="rollresinadminnewsupdatedtoast" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/2f4864e0-19b6-45fc-985e-37bf7f36a0c1">
+
+</details>
 
 ## Defensive Programming
 
