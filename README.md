@@ -350,9 +350,36 @@ Fonts have been imported from [Google Fonts](https://fonts.google.com/).
 
 ### Checkout
 
+<details>
+  <summary>Checkout Page</summary>
+  <img width="449" alt="rollresincheckout" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/bee32dd5-195a-46ca-8cee-89d94a6d0b79">
+</details>
+
+<details>
+  <summary>Checkout Success Page</summary>
+  <img width="314" alt="rollresincheckoutsuccess" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/8b868f87-ee99-479b-80b4-4ea94ca9f664">
+</details>
+
+<details>
+  <summary>Checkout Success Toast Notification</summary>
+  <img width="268" alt="rollresincheckoutsuccesstoast" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/5d57b91e-25d3-4318-b26e-b2835c8d94b9">
+</details>
+
 ### Profile
 
+<img width="473" alt="rollresinprofile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/daf9b6da-0330-4524-965b-a58a122119b5">
+
 ### News
+
+<details>
+  <summary>News Page</summary>
+  <img width="368" alt="rollresinnews" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/af559a7d-8123-4cdc-af25-1c7f6f53cfaa">
+</details>
+
+<details>
+  <summary>News Item</summary>
+  <img width="355" alt="rollresinnewsitem" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/9e2801ef-e0a9-44eb-b5fe-64c58c13780a">
+</details>
 
 ### Register
 
