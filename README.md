@@ -174,7 +174,7 @@ Taking all of the above into account I decided I would need 14 main pages for th
 
 #### Wireframes
 
-### Home Page Wireframes
+##### Home Page Wireframes
 
 <details>
 <summary>Home Page Wireframe Mobile</summary>
@@ -190,7 +190,7 @@ Taking all of the above into account I decided I would need 14 main pages for th
 
 </details>
 
-### Products Page Wireframes
+##### Products Page Wireframes
 
 <details>
 <summary>Products Page Wireframe Desktop</summary>
@@ -220,7 +220,7 @@ Taking all of the above into account I decided I would need 14 main pages for th
 
 </details>
 
-### Product Details Wireframe
+##### Product Details Wireframe
 
 <details>
 <summary>Product Details Wireframe</summary>
@@ -229,7 +229,7 @@ Taking all of the above into account I decided I would need 14 main pages for th
 
 </details>
 
-### News Page Wireframes
+##### News Page Wireframes
 
 <details>
 <summary>News Details Wireframe</summary>
@@ -238,7 +238,7 @@ Taking all of the above into account I decided I would need 14 main pages for th
 
 </details>
 
-### Bag and Checkout Wireframes
+##### Bag and Checkout Wireframes
 
 <details>
 <summary>Bag Wireframe</summary>
@@ -261,7 +261,7 @@ Taking all of the above into account I decided I would need 14 main pages for th
 
 </details>
 
-### AllAuth Wireframes
+##### AllAuth Wireframes
 
 <details>
 <summary>AllAuth Forms Wireframe</summary>
@@ -276,7 +276,6 @@ Taking all of the above into account I decided I would need 14 main pages for th
 <img width="310" alt="rollresinwireframeallauthinfo" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/456426e8-b512-4026-ba49-bd4d14651137">
 
 </details>
-
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
