@@ -174,6 +174,108 @@ Taking all of the above into account I decided I would need 14 main pages for th
 
 #### Wireframes
 
+### Home Page Wireframes
+
+<details>
+<summary>Home Page Wireframe Mobile</summary>
+
+<img width="170" alt="rollresinhomewireframemobile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/cc951bca-1c03-40e9-80aa-e8c2bacd064c">
+
+</details>
+
+<details>
+<summary>Home Page Wireframe Desktop</summary>
+
+<img width="482" alt="rollresinhomewireframedesktop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/7d65a749-2558-4cd4-877c-4344fc03cb9e">
+
+</details>
+
+### Products Page Wireframes
+
+<details>
+<summary>Products Page Wireframe Desktop</summary>
+
+<img width="407" alt="rollresinwireframeproductsdesktop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/e4f9ac01-17e6-431d-a19a-028225bb9bfb">
+
+</details>
+
+<details>
+<summary>Products Page Wireframe Tablet</summary>
+
+<img width="313" alt="rollresinwireframeproductstablet" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/4ab123ee-992f-4eb6-bb55-e9ce83a8f867">
+
+</details>
+
+<details>
+<summary>Products Page Wireframe Mobile</summary>
+
+<img width="200" alt="rollresinwireframeproductsmobile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/23064cc5-353f-4932-9a36-498cd3fc8aaf">
+
+</details>
+
+<details>
+<summary>Add/Edit Product and News Wireframe</summary>
+
+<img width="337" alt="rollresinwireframeaddedit" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/adafe116-66c0-41cb-8d9a-018157f47a0c">
+
+</details>
+
+### Product Details Wireframe
+
+<details>
+<summary>Product Details Wireframe</summary>
+
+<img width="340" alt="rollresinwireframeproductdetails" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/504e9724-7b87-4095-ab53-731f2f77180d">
+
+</details>
+
+### News Page Wireframes
+
+<details>
+<summary>News Details Wireframe</summary>
+
+<img width="335" alt="rollresinwireframenewsdetails" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/a6e436f3-5d4a-4d2b-8557-e72ad3e87083">
+
+</details>
+
+### Bag and Checkout Wireframes
+
+<details>
+<summary>Bag Wireframe</summary>
+
+<img width="331" alt="rollresinwireframebag" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/b89342a8-e08c-44e6-bdcd-c9687e39daaf">
+
+</details>
+
+<details>
+<summary>Checkout Wireframe</summary>
+
+<img width="353" alt="rollresinwireframecheckout" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/b5860184-1b97-4524-8abb-51cce30d96bd">
+
+</details>
+
+<details>
+<summary>Checkout Success Wireframe</summary>
+
+<img width="209" alt="rollresinwireframecheckoutsuccess" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/eb8be82b-6544-4d55-b36f-1504a2d76649">
+
+</details>
+
+### AllAuth Wireframes
+
+<details>
+<summary>AllAuth Forms Wireframe</summary>
+
+<img width="326" alt="rollresinwireframeallauthforms" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/5f3b1be4-dfc4-4516-87db-f0fb04f96866">
+
+</details>
+
+<details>
+<summary>AllAuth Info Wireframe</summary>
+
+<img width="310" alt="rollresinwireframeallauthinfo" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/456426e8-b512-4026-ba49-bd4d14651137">
+
+</details>
 
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
