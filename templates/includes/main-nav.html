@@ -1,62 +1,59 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item d-block d-md-none">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="{% url 'home' %}" id="home-link">
-                Home
-            </a>
-        <!-- All Products -->
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="all-products-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
-            </a>
-            <div class="dropdown-menu bg-dark text-shadow" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item hover-underline-animation">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item hover-underline-animation">By Rating</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item hover-underline-animation">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item hover-underline-animation">All Products</a>
-
-            </div>
-        </li>
-        <!-- Dice -->
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="dice-link" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Dice
-            </a>
-            <div class="dropdown-menu bg-dark text-shadow" aria-labelledby="dice-link">
-                <a href="{% url 'products' %}?category=single_dice" class="dropdown-item hover-underline-animation">Single Dice</a>
-                <a href="{% url 'products' %}?category=dice_sets" class="dropdown-item hover-underline-animation">Dice Sets</a>
-                <a href="{% url 'products' %}?category=specialty_dice" class="dropdown-item hover-underline-animation">Specialty Dice</a>
-                <a href="{% url 'products' %}?category=single_dice,dice_sets,specialty_dice" class="dropdown-item hover-underline-animation">All Dice</a>
-            </div>
-        </li>
-        <!-- Accessories -->
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="accessories-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Accessories
-            </a>
-            <div class="dropdown-menu bg-dark text-shadow" aria-labelledby="accessories-link">
-                <a href="{% url 'products' %}?category=miniatures" class="dropdown-item hover-underline-animation">Miniatures</a>
-                <a href="{% url 'products' %}?category=dice_bags" class="dropdown-item hover-underline-animation">Dice Bags</a>
-                <a href="{% url 'products' %}?category=miniatures,dice_bags" class="dropdown-item hover-underline-animation">All Accessories</a>
-            </div>
-        </li>
-        <!-- Special Offers -->
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="specials-link" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Special Offers
-            </a>
-            <div class="dropdown-menu bg-dark text-shadow" aria-labelledby="specials-link">
-                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item hover-underline-animation">New Arrivals</a>
-                <a href="{% url 'products' %}?category=deals" class="dropdown-item hover-underline-animation">Deals</a>
-                <a href="{% url 'products' %}?category=clearance" class="dropdown-item hover-underline-animation">Clearance</a>
-                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item hover-underline-animation">All Specials</a>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link mr-5 dropdown-item hover-underline-animation" href="{% url 'news_items' %}">News</a></li>
+      <li class="nav-item d-block d-md-none">
+        <a class="logo-font font-weight-bold nav-link mr-5" href="{% url 'home' %}" id="home-link">
+          Home
+        </a>
+      </li>
+      <!-- All Products -->
+      <li class="nav-item dropdown">
+        <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="View all products dropdown">
+          All Products
+        </a>
+        <div class="dropdown-menu bg-dark text-shadow" aria-labelledby="all-products-link">
+          <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item hover-underline-animation">By Price</a>
+          <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item hover-underline-animation">By Rating</a>
+          <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item hover-underline-animation">By Category</a>
+          <a href="{% url 'products' %}" class="dropdown-item hover-underline-animation">All Products</a>
+        </div>
+      </li>
+      <!-- Dice -->
+      <li class="nav-item dropdown">
+        <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="dice-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="View dice dropdown">
+          Dice
+        </a>
+        <div class="dropdown-menu bg-dark text-shadow" aria-labelledby="dice-link">
+          <a href="{% url 'products' %}?category=single_dice" class="dropdown-item hover-underline-animation">Single Dice</a>
+          <a href="{% url 'products' %}?category=dice_sets" class="dropdown-item hover-underline-animation">Dice Sets</a>
+          <a href="{% url 'products' %}?category=specialty_dice" class="dropdown-item hover-underline-animation">Specialty Dice</a>
+          <a href="{% url 'products' %}?category=single_dice,dice_sets,specialty_dice" class="dropdown-item hover-underline-animation">All Dice</a>
+        </div>
+      </li>
+      <!-- Accessories -->
+      <li class="nav-item dropdown">
+        <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="accessories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="View accessories dropdown">
+          Accessories
+        </a>
+        <div class="dropdown-menu bg-dark text-shadow" aria-labelledby="accessories-link">
+          <a href="{% url 'products' %}?category=miniatures" class="dropdown-item hover-underline-animation">Miniatures</a>
+          <a href="{% url 'products' %}?category=dice_bags" class="dropdown-item hover-underline-animation">Dice Bags</a>
+          <a href="{% url 'products' %}?category=miniatures,dice_bags" class="dropdown-item hover-underline-animation">All Accessories</a>
+        </div>
+      </li>
+      <!-- Special Offers -->
+      <li class="nav-item dropdown">
+        <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="View special offers dropdown">
+          Special Offers
+        </a>
+        <div class="dropdown-menu bg-dark text-shadow" aria-labelledby="specials-link">
+          <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item hover-underline-animation">New Arrivals</a>
+          <a href="{% url 'products' %}?category=deals" class="dropdown-item hover-underline-animation">Deals</a>
+          <a href="{% url 'products' %}?category=clearance" class="dropdown-item hover-underline-animation">Clearance</a>
+          <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item hover-underline-animation">All Specials</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="logo-font font-weight-bold nav-link mr-5 dropdown-item hover-underline-animation" href="{% url 'news_items' %}" aria-label="View news items">News</a>
+      </li>
     </ul>
-</div>
+  </div>  
