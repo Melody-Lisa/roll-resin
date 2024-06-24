@@ -20,62 +20,66 @@
                 <hr>
 
                 <div class="row">
-                        {% if wishlist_items %}
-                        {% for product in wishlist_items %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
-                            <div class="card h-100 border-0 bg-dark text-white">
-                                {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}"
-                                        alt="{{ product.name }}">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                        alt="{{ product.name }}">
-                                </a>
+                    {% if wishlist_items %}
+                    {% for product in wishlist_items %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
+                        <div class="card h-100 border-0 bg-dark text-white">
+                            {% if product.image %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid" src="{{ product.image.url }}"
+                                    alt="{{ product.name }}">
+                            </a>
+                            {% else %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                    alt="{{ product.name }}">
+                            </a>
+                            {% endif %}
+                            <a href="{% url 'remove_product_from_wishlist' product.id %}"
+                                class="btn btn-link text-danger">
+                                <i class="fas fa-heart"></i>
+                            </a>
+                            <div class="card-body pb-0">
+                                <p class="card-title">{{ product.name }}</p>
+                            </div>
+                            <div class="card-footer pt-0 border-0">
+                                <p class="lead mb-0">${{ product.price }}</p>
+                                {% if product.category %}
+                                <p class="small mt-1 mb-0">
+                                    <a class="text-green"
+                                        href="{% url 'products' %}?category={{ product.category.name }}">
+                                        <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                    </a>
+                                </p>
                                 {% endif %}
-                                <a href="{% url 'remove_product_from_wishlist' product.id %}"
-                                    class="btn btn-link text-danger">
-                                    <i class="fas fa-heart"></i>
-                                </a>
-                                <div class="card-body pb-0">
-                                    <p class="card-title">{{ product.name }}</p>
-                                </div>
-                                <div class="card-footer pt-0 border-0">
-                                    <p class="lead mb-0">${{ product.price }}</p>
-                                    {% if product.category %}
-                                    <p class="small mt-1 mb-0">
-                                        <a class="text-green"
-                                            href="{% url 'products' %}?category={{ product.category.name }}">
-                                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                        </a>
-                                    </p>
-                                    {% endif %}
-                                    {% if product.rating %}
-                                    {% if product.rating >= 4.00 %}
-                                    <small><i class="fas fa-star text-green mr-1"></i>{{ product.rating }} / 5</small>
-                                    {% elif product.rating > 2.00 %}
-                                    <small><i class="fas fa-star text-yellow mr-1"></i>{{ product.rating }} / 5</small>
-                                    {% else %}
-                                    <small><i class="fas fa-star text-red mr-1"></i>{{ product.rating }} / 5</small>
-                                    {% endif %}
-                                    {% else %}
-                                    <small class="text-red">No Rating</small>
-                                    {% endif %}
-                                </div>
+                                {% if product.rating %}
+                                {% if product.rating >= 4.00 %}
+                                <small><i class="fas fa-star text-green mr-1"></i>{{ product.rating }} / 5</small>
+                                {% elif product.rating > 2.00 %}
+                                <small><i class="fas fa-star text-yellow mr-1"></i>{{ product.rating }} / 5</small>
+                                {% else %}
+                                <small><i class="fas fa-star text-red mr-1"></i>{{ product.rating }} / 5</small>
+                                {% endif %}
+                                {% else %}
+                                <small class="text-red">No Rating</small>
+                                {% endif %}
                             </div>
                         </div>
-                        {% endfor %}
-                        {% else %}
-                        <p class="lead mb-5 text-center">Your Wishlist is empty.</p>
-                        <a href="{% url 'products' %}" class="btn form-button btn-lg">
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <div class="col-12 lead mb-5 text-center">
+                        Your Wishlist is empty.
+                    </div>
+                    <div class="col">
+                        <a href="{% url 'products' %}" class="btn form-button">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="text-uppercase">Keep Shopping</span>
                         </a>
-                        {% endif %}
+                    </div>
+                    {% endif %}
                 </div>
 
             </div>

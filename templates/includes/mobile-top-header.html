@@ -25,13 +25,13 @@
     </li>
     <!-- My Account -->
     <li class="list-inline-item dropdown text-shadow">
-        <a class="nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+        <a class="nav-link d-block d-lg-none" href="#" id="user-options-mobile" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
             <div class="text-center">
                 <div><i class="fas fa-user"></i></div>
             </div>
         </a>
-        <div class="dropdown-menu bg-dark" aria-labelledby="user-options">
+        <div class="dropdown-menu bg-dark" aria-labelledby="user-options-mobile">
             {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
             <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
