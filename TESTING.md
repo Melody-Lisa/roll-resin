@@ -1,49 +1,12 @@
-# BlissBoost Testing
-
-<div style="text-align: right;">
+# Roll & Resin Testing
 
 [Back to README.md](README.md)
 
-</div>
+<img width="692" alt="roll & resin responsive layout" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/c8b3492e-d640-4b26-93a9-d6c0003156e3">
 
-<img src="static/documents/blissboost_responsive.png" alt="An image representing how the site looks across different devices of varying size.">
-
-[View the live project here.](https://blissboost-079490cc3274.herokuapp.com)
+[View the live project here.](https://roll-and-resin-60438760f385.herokuapp.com)
 
 Manual testing was conducted continuously throughout the development process to ensure the functionality of various features across the site.
-
-- - -
-
-## CONTENTS
-
-* [AUTOMATED TESTING](#automated-testing)
-  * [W3C Validator](#w3c-validator)
-  * [JavaScript Validator](#javascript-validation)
-  * [Python Validator](#python-validation)
-  * [Lighthouse](#lighthouse)
-  * [WAVE Testing](#wave-testing)
-* [MANUAL TESTING](#manual-testing)
-  * [Testing User Stories](#testing-user-stories)
-  * [Full Testing](#full-testing)
-    * [Site Wide](#site-wide)
-    * [Index Home](#index-home)
-    * [Register Page](#register-page)
-    * [Log In Page](#log-in-page)
-    * [Profile](#profile)
-    * [Edit Profile](#edit-profile)
-    * [Community Posts](#community-posts)
-    * [Add Post](#add-post)
-    * [Edit Post](#edit-post)
-    * [Get Themes](#get-themes)
-    * [Add Theme](#add-theme)
-    * [Edit Theme](#edit-theme)
-    * [404 Page](#404-page)
-  * [Accessibility Testing](#accessibility-testing)
-* [BUGS](#bugs)
-  * [Solved Bugs](#solved-bugs)
-  * [Known Bugs](#known-bugs)
-
-<sup><sub>[*Back to top*](#contents)</sup></sub>
 
 -----
 
@@ -419,10 +382,188 @@ The lighthouse tool within the chrome developer tools has been used to test perf
 
 | | Performance | Accessibility | Best Practice | SEO |
 | :---: | :---: | :---: | :---: | :---: |
-| Desktop | 97 | 84 | 100 | 89 |
-| Mobile |  |  |  |  |
+| Desktop | 98 | 92 | 100 | 100 |
+| Mobile | 76 | 94 | 100 | 100 |
 
+<details>
+<summary>Home Screenshots</summary>
+<img width="377" alt="rollresinlighthousehomedesktop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/fba34249-ecbc-40a8-8d0c-922aafb3662f">
+<img width="376" alt="rollresinlighthousehomemobile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/a19f54c3-8be1-4994-b1d2-211cec676632">
+</details>
 
+#### Products
+
+| | Performance | Accessibility | Best Practice | SEO |
+| :---: | :---: | :---: | :---: | :---: |
+| Desktop | 78 | 84 | 100 |100 |
+| Mobile | 65 | 86 | 100 | 100 |
+
+<details>
+<summary>Products Screenshots</summary>
+<img width="374" alt="rollresinlighthouseproductsdesktop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/ed750b2f-5da1-4800-8677-278a3d23946a">
+<img width="373" alt="rollresinlighthouseproductsmobile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/0f695c15-1dac-41b6-9045-940ffb9a3d3c">
+</details>
+
+#### Product Details
+
+| | Performance | Accessibility | Best Practice | SEO |
+| :---: | :---: | :---: | :---: | :---: |
+| Desktop | 90 | 78 | 100 | 100 |
+| Mobile | 63 | 80 | 100 | 100 |
+
+<details>
+<summary>Product Details Screenshots</summary>
+<img width="376" alt="rollresinlighthouseproductdetailsmobile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/029fbd85-6293-40c3-8afe-fdcd4526f6e0">
+<img width="371" alt="rollresinlighthouseproductdetailsdesktop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/f941cc78-c7ba-4c14-938f-0405a2a8d5a5">
+</details>
+
+#### Wishlist
+
+| | Performance | Accessibility | Best Practice | SEO |
+| :---: | :---: | :---: | :---: | :---: |
+| Desktop | 81 | 88 | 100 | 100 |
+| Mobile | 64 | 89 | 100 | 100 |
+
+<details>
+<summary>Wishlist Screenshots</summary>
+<img width="373" alt="rollresinlighthousewishlistdesktop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/286e8d24-a7de-4e54-b54d-1be113c77dcd">
+</details>
+
+#### Bag
+
+| | Performance | Accessibility | Best Practice | SEO |
+| :---: | :---: | :---: | :---: | :---: |
+| Desktop | 96 | 87 | 100 | 100 |
+| Mobile | 77 | 88 | 100 | 100 |
+
+<details>
+<summary>Bag Screenshots</summary>
+<img width="376" alt="rollresinlighthousebagdesktop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/64e65b38-fdf5-4f8f-b4a8-e4f2b553cb47">
+<img width="372" alt="rollresinlighthousebagmobile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/0d0fa14c-03a7-46d9-86b3-653ecd85030b">
+</details>
+
+#### Checkout
+
+| | Performance | Accessibility | Best Practice | SEO |
+| :---: | :---: | :---: | :---: | :---: |
+| Desktop | 86 | 82 | 100 | 100 |
+| Mobile | 49 | 84 | 100 | 100 |
+
+<details>
+<summary>Checkout Screenshots</summary>
+<img width="371" alt="rollresinlighthousecheckoutdesktop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/07ba5150-d666-40da-8c62-46a930778ad0">
+<img width="374" alt="rollresinlighthousecheckoutmobile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/7a5f04ba-4351-46e3-ab73-c5644e04bca8">
+</details>
+
+#### Checkout Success
+
+| | Performance | Accessibility | Best Practice | SEO |
+| :---: | :---: | :---: | :---: | :---: |
+| Desktop | 90 | 92 | 100 | 100 |
+| Mobile | 65 |  94| 100 | 100 |
+
+<details>
+<summary>Checkout Success Screenshots</summary>
+<img width="371" alt="rollresinlighthousecheckoutsuccessdesktop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/4e54f276-8c2f-47c9-9e66-ca993797f614">
+<img width="373" alt="rollresinlighthousecheckoutsuccessmobile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/c08562ea-46af-4166-8511-2de347f7ead6">
+</details>
+
+#### Profile
+
+| | Performance | Accessibility | Best Practice | SEO |
+| :---: | :---: | :---: | :---: | :---: |
+| Desktop | 88 | 89 | 100 | 100 |
+| Mobile | 72 | 91 | 100 | 100 |
+
+<details>
+<summary>Profile Screenshots</summary>
+<img width="371" alt="rollresinlighthouseprofiledesktop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/cb7f4e9d-a337-4552-bf12-c4a23501b8ef">
+<img width="364" alt="rollresinlighthouseprofilemobile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/8249c6b2-4c10-4aa9-b8aa-48e0931917f0">
+</details>
+
+#### News
+
+| | Performance | Accessibility | Best Practice | SEO |
+| :---: | :---: | :---: | :---: | :---: |
+| Desktop | 89 | 88 | 100 | 100 |
+| Mobile | 59 | 87 | 100 | 100 |
+
+<details>
+<summary>News Screenshots</summary>
+<img width="373" alt="rollresinlighthousenewsdesktop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/6283002b-bb76-4127-8f82-4cecf2f73009">
+<img width="368" alt="rollresinlighthousenewsmobile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/29ba6fb4-ada0-4240-b45f-851781dc3c76">
+</details>
+
+#### News Item
+
+| | Performance | Accessibility | Best Practice | SEO |
+| :---: | :---: | :---: | :---: | :---: |
+| Desktop | 69 | 88 | 100 | 100 |
+| Mobile | 58 | 89 | 100 | 100 |
+
+<details>
+<summary>News Item Screenshots</summary>
+<img width="370" alt="rollresinlighthousenewsitemdesktop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/4a31f9a5-3661-4846-a104-4b223169c258">
+<img width="368" alt="rollresinlighthousenewsitemmobile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/3c961646-f8db-4cfa-a0cc-d67ecb496049">
+</details>
+
+#### Add Product
+
+| | Performance | Accessibility | Best Practice | SEO |
+| :---: | :---: | :---: | :---: | :---: |
+| Desktop | 90 | 88 | 100 | 100 |
+| Mobile | 72 | 88 | 100 | 100 |
+
+<details>
+<summary>Add Product Screenshots</summary>
+<img width="370" alt="rollresinlighthouseaddproductdesktop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/f80b4510-b2d5-4f6c-bf4a-faf6c4ccfc5d">
+<img width="371" alt="rollresinlighthouseaddproductmobile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/5eb59ca2-4c6a-4f83-88c5-bd455cd97139">
+</details>
+
+#### Edit Product
+
+| | Performance | Accessibility | Best Practice | SEO |
+| :---: | :---: | :---: | :---: | :---: |
+| Desktop | 91 | 78 | 100 | 90 |
+| Mobile | 73 | 78 | 100 | 92 |
+
+<details>
+<summary>Edit Product Screenshots</summary>
+<img width="365" alt="rollresinlighthouseeditproductdesktop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/4ebf6534-fb71-4255-897f-3d7415c32f07">
+<img width="370" alt="rollresinlighthouseeditproductmobile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/5e91447a-b15c-4061-b4fb-c12572c63678">
+</details>
+
+#### Add News Item
+
+| | Performance | Accessibility | Best Practice | SEO |
+| :---: | :---: | :---: | :---: | :---: |
+| Desktop | 91 | 88 | 100 | 100 |
+| Mobile | 68 | 88 | 100 | 100 |
+
+<details>
+<summary>Add News Item Screenshots</summary>
+<img width="371" alt="rollresinlighthouseaddnewsitemdesktop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/f5c05ffc-eeda-4a20-ae90-b6d626f80c22">
+<img width="373" alt="rollresinlighthouseaddnewsitemmobile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/07ffcc83-9f68-48a3-aa34-5d52756814ce">
+</details>
+
+#### Edit News Item
+
+| | Performance | Accessibility | Best Practice | SEO |
+| :---: | :---: | :---: | :---: | :---: |
+| Desktop | 87 | 78 | 96 | 90 |
+| Mobile | 69 | 78 | 96 | 92 |
+
+<details>
+<summary>Edit News Item Screenshots</summary>
+<img width="368" alt="rollresinlighthouseeditnewsitemdesktop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/ff6404d3-a0d5-40c2-81e6-7f2ad26edd8f">
+<img width="370" alt="rollresinlighthouseeditproductmobile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/e63dcb7e-958f-43e8-a524-3a50189513f1">
+</details>
+
+#### Lighthouse Notes
+
+>Performance issues have been flagged throughout the site, however some appear to be due to the device used for testing. Other performance issues require refactoring or alternative ways to call javascript and css files that are >beyond the scope of the learning materials. Future deployments of the site will look in to ways of improving this.
+
+>Some minor contrasting issues have been flagged by lighthouse that have not presented as issues through other testing methods. Future deployments of the site will look into improving this with more in depth testing and research.
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
@@ -430,7 +571,7 @@ The lighthouse tool within the chrome developer tools has been used to test perf
 
 ### WAVE Testing
 
-Parts of the site have been tested for accessibility with [WAVE](https://wave.webaim.org),
+Testing was attempted with [WAVE](https://wave.webaim.org), however there were issues with loading pages of the site onto the platform. Accessibility has instead been tested through Lighthouse and manual tests.
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
@@ -441,8 +582,12 @@ Parts of the site have been tested for accessibility with [WAVE](https://wave.we
 ### Testing User Stories
 
 >#### New User Goals
->
->
+>- As a new site user, I would like to easily navigate to the main categories of products, so that I can see what the site offers.
+>- As a new site user, I would like to see my purchase total, so that I don't overspend.
+>- As a new site user, I would like to view the site's latest news, so that I can understand the company better.
+>- As a new site user, I would like a clear and straightforward checkout process, so that I can finalize my purchase smoothly.
+>- As a new site user, I would like to see social media icons prominently displayed, so that I can follow the company on my preferred platforms for updates.
+
 >#### Returning User Goals
 >
 >
