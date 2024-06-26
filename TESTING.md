@@ -427,6 +427,7 @@ The lighthouse tool within the chrome developer tools has been used to test perf
 <details>
 <summary>Wishlist Screenshots</summary>
 <img width="373" alt="rollresinlighthousewishlistdesktop" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/286e8d24-a7de-4e54-b54d-1be113c77dcd">
+
 </details>
 
 #### Bag
@@ -563,7 +564,7 @@ The lighthouse tool within the chrome developer tools has been used to test perf
 
 >Performance issues have been flagged throughout the site, however some appear to be due to the device used for testing. Other performance issues require refactoring or alternative ways to call javascript and css files that are >beyond the scope of the learning materials. Future deployments of the site will look in to ways of improving this.
 
->Some minor contrasting issues have been flagged by lighthouse that have not presented as issues through other testing methods. Future deployments of the site will look into improving this with more in depth testing and research.
+>Some minor contrasting issues have been flagged by lighthouse that have not presented as issues through other testing methods. These have since been fixed by adjusting hue of reds and greens across the site.
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
@@ -581,18 +582,40 @@ Testing was attempted with [WAVE](https://wave.webaim.org), however there were i
 
 ### Testing User Stories
 
->#### New User Goals
->- As a new site user, I would like to easily navigate to the main categories of products, so that I can see what the site offers.
->- As a new site user, I would like to see my purchase total, so that I don't overspend.
->- As a new site user, I would like to view the site's latest news, so that I can understand the company better.
->- As a new site user, I would like a clear and straightforward checkout process, so that I can finalize my purchase smoothly.
->- As a new site user, I would like to see social media icons prominently displayed, so that I can follow the company on my preferred platforms for updates.
+#### New User Goals
 
->#### Returning User Goals
->
->
->#### Site Admin Goals
->
+| Goals | Implementation | Image |
+|-----|-----|-----|
+| As a new site user, I would like to easily navigate to the main categories of products, so that I can see what the site offers. | Implement a clear and intuitive navigation menu that categorizes the products effectively.               | <img width="400" alt="rollresinnav" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/269f163e-8f83-4588-8107-c6556eec632d"><img width="292" alt="rollresinmobilenavopen" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/815ebbc8-333d-4757-b4a8-641fd2166f5c"> |
+| As a new site user, I would like to see my purchase total, so that I don't overspend. | Display a shopping cart summary or a mini-cart that updates in real-time as items are added. |  <img width="400" alt="rollresinbagpreview" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/6b2d4d20-0e71-4532-909e-fec99f5dd485"> |
+| As a new site user, I would like to view the site's latest news, so that I can understand the company better. | Include a news section with the latest updates. | <img width="400" alt="rollresinnews" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/af559a7d-8123-4cdc-af25-1c7f6f53cfaa"> |
+| As a new site user, I would like a clear and straightforward checkout process, so that I can finalize my purchase smoothly. | Design a user-friendly checkout flow with clear steps and minimal required fields to complete the purchase. | <img width="449" alt="rollresincheckout" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/bee32dd5-195a-46ca-8cee-89d94a6d0b79"> |
+| As a new site user, I would like to see social media icons prominently displayed, so that I can follow the company on my preferred platforms for updates. | Place social media icons in the header, footer, or a dedicated section that are easily visible and accessible. | <img width="400" alt="rollresinfooter" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/c708ac40-822b-4374-a58a-bd829687a6be"><img width="400" alt="rollresinfootermobile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/0a00dab0-1f50-42c3-9ff8-ed105e435c54"> |
+
+#### Returning User Goals
+
+| Goals | Implementation | Image |
+|-----|-----|-----|
+| As a returning site user, I would like to receive email confirmation when I register, so that I can verify my account easily. | Implement an email confirmation system that sends a verification link to the user's email upon registration. | <img width="400" alt="rollresinregisteremail" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/b05c3e68-14af-46fa-a320-7dabe5afd6cb"> |
+| As a returning site user, I would like a secure login and registration process, so that I can protect my personal information. | Use Django's allauth for secure and customizable authentication, registration, and account management processes. | <img width="400" alt="rollresinregister" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/60ece84a-47ca-43e6-b7e6-5ef525a762ff"><img width="407" alt="rollresinlogin" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/2580a6e1-c1e0-4a67-ad9f-a3abf5c9b584"> |
+| As a returning site user, I would like a dashboard where I can view and manage my orders, so that I can track my purchases and manage my account. | Develop user profile with shipping information and past order information. | <img width="400" alt="rollresinprofile" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/b7d298db-a1d4-4c72-843e-4aa528d713b0"> |
+| As a returning site user, I would like to view the company's latest news, so that I can keep up to date with their products. | Include a news section that highlights the latest news and product updates. | <img width="400" alt="rollresinnews" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/af559a7d-8123-4cdc-af25-1c7f6f53cfaa"> |
+| As a returning site user, I would like to be able to save products to buy later, without having to add them to my basket. | Implement a wishlist feature that allows users to save products for later purchase. | <img width="400" alt="rollresinwishlist" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/338270d1-2938-4e21-b4ba-b037f7c0a85a"> |
+
+#### Site Admin Goals
+
+# Goals
+
+| Goals | Implementation | Image |
+|-----|-----|-----|
+| As a site administrator, I should be able to add new products. | Provide an admin interface where administrators can easily input product details and upload images. | <img width="400" alt="rollresinadminaddproduct" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/0ddc4df2-9453-470c-ba6d-bc08ed8e9f3b"> |
+| As a site administrator, I should be able to edit existing products. | Implement an edit functionality in the admin interface to update product details and images. | <img width="400" alt="rollresinadminproductedit" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/c730dd48-6d19-4cf8-961b-072e354c5e77"> |
+| As a site administrator, I should be able to remove products. | Enable a delete option in the admin interface for removing products from the catalog. | <img width="400" alt="rollredinadmindeleteproduct" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/a95fe868-7561-48c9-ac15-d9dd30a6facb"> |
+| As a site administrator, I should be able to add news articles. | Develop a news management interface where administrators can create and publish news articles. | <img width="400" alt="rollresinadminnewsadd" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/acd85fe1-3d7b-44a5-bd5a-b5ff87a3a42a"> |
+| As a site administrator, I should be able to edit existing news articles. | Implement an edit functionality in the news management interface to update articles. | <img width="400" alt="rollresinadminnewsedit" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/b86b8dcf-4e47-4439-85c7-8ed04c1861bf"> |
+| As a site administrator, I should be able to remove news articles. | Provide a delete option in the news management interface for removing articles. | <img width="400" alt="rollresinadmindeletenews" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/eff5c5f0-14d6-4d81-aaa2-da3d1c5571dd">
+ |
+
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
@@ -617,54 +640,13 @@ Full testing was performed on the following devices:
 
 Additional testing has been carried out by friends and colleagues including on apple devices and safari.
 
-#### Site-Wide
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| Navbar Links | View Different navbar links based on logged out/logged in user/logged in admin | Viewed site based on different logged in status | Links appear based on each status | __PASS__ |
-| Brand Logo | Takes you to index or profile home depending on whether you are logged in | Clicked logo | Redirected accordingly | __PASS__ |
-| Footer Links | Links open in new tabs to github and linked in | Clicked links | Links open in new tabs to github and linked in | __PASS__ |
-
-#### Index Home
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| Shop now Button in call to action | To be taken to the products page | Clicked button | Taken to products page | __PASS__ |
-
-#### Register Page
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-
-
-#### Log In Page
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-
-
-#### Profile
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-
-
-
-
-#### 404 Page
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --- | --- | --- | --- | --- |
-| Appears when incorrect url entered | View 404 page | Input incorrect url path | Page appears |  |
-| Home button | User is returned to index if logged out or their profile if logged in | Click Home button | Redirected accordingly |  |
-
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
 -----
 
 ### Accessibility Testing
 
-Accessibility has been tested via narrator for windows and talkback on android. 
+Manual accessibility has been tested via narrator for windows and talkback on android. 
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
@@ -676,7 +658,7 @@ Accessibility has been tested via narrator for windows and talkback on android.
 
 | # | Issue | Details | What was done | Fixed? |
 | --- | --- | --- | --- | --- |
- 
+ | 1 | Item quantity box | The box was not showing numbers when viewing the bag page, but appeared fine when dev tools was open | Remove spinner that is automatically applied | __YES__ | 
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
@@ -684,6 +666,10 @@ Accessibility has been tested via narrator for windows and talkback on android.
 
 ### Known Bugs
 
+| #  | Issue | Details | Next Steps |
+|-----|-----|-----|-----|
+| 1  | Order total in confirmation emails | When sending order confirmation emails, the total amount for the order remains at 0. | Investigate the code responsible for calculating the total amount and ensure it's correctly included in the email. |
+| 2  | Form formatting on register page | The form on the register page occasionally loses its formatting. This issue usually resolves after refreshing the page. | Check for any CSS or JavaScript conflicts that may cause the formatting issue and ensure the form styles are consistently applied. |
 
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
