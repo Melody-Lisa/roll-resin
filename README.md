@@ -638,6 +638,10 @@ In addition to backend views, checks have been implemented within the templates 
 
 ## Future Implementations
 
+### Deleting Products and News Items
+
+Currently there is no extra defense in place when deleting products or news items. Future versions of the site will prioritise adding extra steps in the deletion process.
+
 ### Reviews and Ratings
 
 Enhancing the current review functionality to allow user contributions will foster greater engagement and provide valuable feedback on products or services offered by the application. Key enhancements will include:
