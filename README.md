@@ -2,67 +2,11 @@
 
 By Melody Lisa.
 
-[View the live project here.](https://blissboost-079490cc3274.herokuapp.com)
+<img width="692" alt="roll & resin responsive layout" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/c8b3492e-d640-4b26-93a9-d6c0003156e3">
+
+[View the live project here.](https://roll-and-resin-60438760f385.herokuapp.com)
 
 This is the documentation for Roll & Resin - an ecommerce site aimed towards selling tabletop accessories. The site has been built using HTML5, CSS3 with bootstrap templating, Python and Django with a relational database stored with ElephantSQL.
-
-******
-
-## Contents
-
-* [User Experience (UX)](#user-experience---ux)
-  * [Strategy](#strategy)
-    * [User Stories](#user-stories)
-      * [New Site Users](#new-site-users)
-      * [Returning Site Users](#returning-site-users)
-      * [Site Admin](#site-admin)
-  * [Scope](#scope)
-  * [Structure](#structure)
-    * [Site Structure](#site-structure)
-    * [Database Structure](#database-structure)
-  * [Skeleton](#skeleton)
-    * [Wireframes](#wireframes)
-* [User Interface (UI) Design](#user-interface---design)
-  * [Surface](#surface)
-    * [Typography](#typography)
-    * [Colours](#colours)
-* [Features](#features)
-  * [Favicon](#favicon)
-  * [Navbar](#navbar)
-  * [Footer](#footer)
-  * [Home](#home)
-  * [Register](#register)
-  * [Log In](#log-in)
-  * [Profile](#profile)
-  * [Admin Pages](#admin-pages)
-  * [404 Page](#404-page)
-* [Defensive Programming](#defensive-programming)
-* [Future Implementations](#future-implementations)
-* [Accessibility](#accessibility)
-  * [Alt Text](#alt-text)
-  * [Aria Labels](#aria-labels)
-  * [Colours](#colours-1)
-  * [Fonts](#fonts)
-* [Technologies Used](#technologies-used)
-  * [Languages](#languages)
-  * [Frameworks](#frameworks)
-  * [Libraries](#libraries)
-  * [Programs](#programs)
-  * [Testing and Validation Tools](#testing-and-validation-tools)
-* [Deployment & Local Development](#deployment--local-development)
-  * [MongoDB Non-Relational Database](#mongodb-non-relational-database)
-  * [Heroku Deployment](#heroku-deployment)
-  * [Local Deployment](#local-deployment)
-    * [How to Fork](#how-to-fork)
-    * [How to Clone](#how-to-clone)
-* [Testing](#testing)
-* [Credits](#credits)
-  * [Code Used](#code-used)
-  * [Content](#content)
-  * [Media](#media)
-  * [Acknowledgements](#acknowledgements)
-
-<sup><sub>[*Back to top*](#contents)</sup></sub>
 
 -----
 
