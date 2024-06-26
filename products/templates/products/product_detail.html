@@ -102,9 +102,10 @@
                                                 <div class="input-group-prepend">
                                                     <button class="decrement-qty btn-dark btn btn-down rounded-0"
                                                         data-item_id="{{ product.id }}"
-                                                        id="decrement-qty_{{ product.id }}">
+                                                        id="decrement-qty_{{ product.id }}"
+                                                        aria-label="Decrease quantity for item {{ item.name }}">
                                                         <span class="icon">
-                                                            <i class="fas fa-minus"></i>
+                                                            <i class="fas fa-minus" aria-hidden="true"></i>
                                                         </span>
                                                     </button>
                                                 </div>
@@ -114,9 +115,10 @@
                                                 <div class="input-group-append">
                                                     <button class="increment-qty btn-dark btn btn-up rounded-0"
                                                         data-item_id="{{ product.id }}"
-                                                        id="increment-qty_{{ product.id }}">
+                                                        id="increment-qty_{{ product.id }}"
+                                                        aria-label="Increase quantity for item {{ item.name }}">
                                                         <span class="icon">
-                                                            <i class="fas fa-plus"></i>
+                                                            <i class="fas fa-plus" aria-hidden="true"></i>
                                                         </span>
                                                     </button>
                                                 </div>

@@ -64,9 +64,10 @@
                                                         <button
                                                             class="decrement-qty btn-dark btn btn-sm btn-down rounded-0"
                                                             data-item_id="{{ item.item_id }}"
-                                                            id="decrement-qty_{{ item.item_id }}">
+                                                            id="decrement-qty_{{ item.item_id }}"
+                                                            aria-label="Decrease quantity for item {{ item.name }}">
                                                             <span>
-                                                                <i class="fas fa-minus fa-sm"></i>
+                                                                <i class="fas fa-minus fa-sm" aria-hidden="true"></i>
                                                             </span>
                                                         </button>
                                                     </div>
@@ -78,16 +79,17 @@
                                                         <button
                                                             class="increment-qty btn-dark btn btn-sm btn-up rounded-0"
                                                             data-item_id="{{ item.item_id }}"
-                                                            id="increment-qty_{{ item.item_id }}">
+                                                            id="increment-qty_{{ item.item_id }}"
+                                                            aria-label="Increase quantity for item {{ item.name }}">
                                                             <span>
-                                                                <i class="fas fa-plus fa-sm"></i>
+                                                                <i class="fas fa-plus fa-sm" aria-hidden="true"></i>
                                                             </span>
                                                         </button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="update-link text-success"><small>Update</small></a>
+                                        <a class="update-link btn-up"><small>Update</small></a>
                                         <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}">
                                             <small>Remove</small>
                                         </a>
@@ -148,7 +150,7 @@
 </div>
 
 <div class="fixed-bottom mb-5 ml-4">
-    <a href="#" class="btn btn-dark btn-lg rounded-circle box-shadow">
+    <a href="#" class="btn btn-dark btn-lg rounded-circle box-shadow" aria-label="Back to top">
         <i class="fas fa-arrow-up text-green text-shadow"></i>
     </a>
 </div>

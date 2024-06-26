@@ -216,15 +216,16 @@ a.hover-underline-animation:hover {
 .text-green,
 .text-muted,
 .text-success {
-    color: green !important;
+    color: rgb(0, 255, 38) !important;
 }
 
 .text-yellow {
     color: yellow;
 }
 
-.text-red {
-    color: red;
+.text-red,
+.text-danger {
+    color: rgb(253, 83, 26) !important;
 }
 
 .border-black {
@@ -272,7 +273,7 @@ hr {
 .shop-now-button,
 .form-button {
     background: #212529;
-    color: red;
+    color: white;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
     border: 1px solid black;
 }
