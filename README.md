@@ -22,7 +22,7 @@ This project was built as a milestone project on my Diploma in Web Application D
 ### New Site Users
 
 - As a new site user, I would like to easily navigate to the main categories of products, so that I can see what the site offers.
-- As a new site user, I would like to see my purchase total at all times, so that I don't overspend.
+- As a new site user, I would like to see my purchase total, so that I don't overspend.
 - As a new site user, I would like to view the site's latest news, so that I can understand the company better.
 - As a new site user, I would like a clear and straightforward checkout process, so that I can finalize my purchase smoothly.
 - As a new site user, I would like to see social media icons prominently displayed, so that I can follow the company on my preferred platforms for updates.
@@ -32,7 +32,6 @@ This project was built as a milestone project on my Diploma in Web Application D
 - As a returning site user, I would like to receive email confirmation when I register, so that I can verify my account easily.
 - As a returning site user, I would like a secure login and registration process, so that I can protect my personal information.
 - As a returning site user, I would like a dashboard where I can view and manage my orders, so that I can track my purchases and manage my account.
-- As a returning site user, I would like to easily edit my personal information, so that I can update my details as needed.
 - As a returning site user, I would like to view the company's latest news, so that I can keep up to date with their products.
 - As a returning site user, I would like to be able to save products to buy later, without having to add them to my basket.
 
@@ -44,7 +43,6 @@ This project was built as a milestone project on my Diploma in Web Application D
 - As a site administrator, I should be able to add news articles.
 - As a site administrator, I should be able to edit existing news articles.
 - As a site administrator, I should be able to remove news articles.
-
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
@@ -257,7 +255,13 @@ Fonts have been imported from [Google Fonts](https://fonts.google.com/).
 
 #### Colours
 
+* #212529: Bootstrap's "dark" grey is used as the background for all navbars and content boxes.
 
+* rgb(0, 255, 38): Green, used for support messages and various accents across the site.
+
+* rgb(253, 83, 26): Used for warning messages and various accents across the site.
+
+Both the red and green colours have been adjusted for maximum contrasting and accessibility across the site, accounting for the dark grey background which could present difficulties with certain forms of colourblindness. White is used for the main text colour across the site to ensure users don't miss important information.
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
@@ -446,7 +450,6 @@ Fonts have been imported from [Google Fonts](https://fonts.google.com/).
 ![rollresinregisterauthtoast](https://github.com/Melody-Lisa/roll-resin/assets/137832068/36835e29-ae38-4edc-9dc6-94eee3d7d84f)
 </details>
 
-
 ### Log In
 
 <details>
@@ -472,7 +475,6 @@ Fonts have been imported from [Google Fonts](https://fonts.google.com/).
 
 ![rollresinloginsuccesstoast](https://github.com/Melody-Lisa/roll-resin/assets/137832068/3a085f0e-568e-4226-8a4a-5c1a7627c5c7)
 </details>
-
 
 ### Log Out
 
@@ -627,7 +629,6 @@ In addition to backend views, checks have been implemented within the templates 
   {% endif %}
 </div>
 ```
-
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
