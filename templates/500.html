@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container my-3">
+    <div class="row align-items-center justify-content-center text-shadow">
+        <div class="col-12 col-lg-11">
+            <div class="content-box p-4 rounded-0 bg-dark border-black box-shadow text-white">
+                <hr>
+                <h2 class="logo-font text-center">We're On it!</h2>
+                <hr>
+                <p class="text-center">
+                    The page you are trying to view may be broken.
+                    Don't worry, our gnomes are likely trying to fix it this moment.
+                    Why not try something else in the meantime?
+                </p>
+
+                <a href="{% url 'products' %}" class="btn form-button btn-lg">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
