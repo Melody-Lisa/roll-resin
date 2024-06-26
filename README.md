@@ -1055,13 +1055,17 @@ Please see [TESTING.md](TESTING.md) for all testing elements of this site.
 
 ## Credits
 
-### Code Used
+On top of the learning materials provided, the following past projects aided in the understanding of the project and documentation as a whole:
 
-
+* [Speedy Eats](https://github.com/cshimvin/speedy-eats-ms4)
+* [Tech Treasures](https://github.com/dougyb83/tech-treasures)
+* [Lunar Glow](https://github.com/D3lyth/lunar_glow)
+* [Oenotrus](https://github.com/HawesJM/oenotrus)
+* [Gold's Gym](https://github.com/JohnGC1510/milestone_project_4)
 
 ### Content
 
-
+All written content has been created by the developer.
 
 ### Media
 
