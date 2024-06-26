@@ -255,13 +255,15 @@ Fonts have been imported from [Google Fonts](https://fonts.google.com/).
 
 #### Colours
 
-* #212529: Bootstrap's "dark" grey is used as the background for all navbars and content boxes.
+## Colors
 
-* rgb(0, 255, 38): Green, used for support messages and various accents across the site.
+| Color Code        | Description                                            | Preview                   |
+|-------------------|--------------------------------------------------------|---------------------------|
+| `#343a40`         | Bootstrap's "dark" grey-800 used as the background for all navbars and content boxes. | <img width="150" alt="dark-grey" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/3f01f0d4-1085-41d0-9d1c-45bdbb443541"> |
+| `rgb(0, 255, 38)` | Green, used for support messages and various accents across the site. | <img width="150" alt="green-text" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/e9c4a05e-9c8b-4f41-8ae9-c0f4ac6b5330"> |
+| `rgb(253, 83, 26)`| Used for warning messages and various accents across the site. | <img width="150" alt="red-text" src="https://github.com/Melody-Lisa/roll-resin/assets/137832068/b26cd914-5dc9-4e02-b8cf-2852edfe4145"> |
 
-* rgb(253, 83, 26): Used for warning messages and various accents across the site.
-
-Both the red and green colours have been adjusted for maximum contrasting and accessibility across the site, accounting for the dark grey background which could present difficulties with certain forms of colourblindness. White is used for the main text colour across the site to ensure users don't miss important information.
+Both the red and green colours have been adjusted for maximum contrasting and accessibility across the site when used with text, accounting for the dark grey background which could present difficulties with certain forms of colourblindness. White is used for the main text colour across the site to ensure users don't miss important information.
 
 <sup><sub>[*Back to top*](#contents)</sup></sub>
 
